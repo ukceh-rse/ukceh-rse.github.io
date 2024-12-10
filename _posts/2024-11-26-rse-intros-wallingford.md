@@ -1,7 +1,7 @@
 ---
-title: RSE Introductions in Wallingford
-date: 26-11-2024
-layout: post
+title: "RSE Introductions in Wallingford"
+date: 2024-11-26
+permalink: /weeknotes/2024/11/rse-intros-wallingford/ 
 ---
 
 # RSE Introductions in Wallingford
