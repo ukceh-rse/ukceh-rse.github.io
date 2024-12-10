@@ -14,6 +14,8 @@ There are already quite a few folks in Research Software Engineer roles across U
 
 We're trying to do a lot of our communication in public via [Github Discussions](https://github.com/ukceh-rse/Discussions) and set up an experimental [Github Organisation](https://github.com/ukceh-rse/) in order to hold those, plus talk material, templates, smaller or prototype status projects, and work-in-progress guidelines that we'd like to spread round the organisation.
 
+We're also trying to (re)build a practise of regular [weeknotes](/weeknotes/) to help our wider research community stay informed and engaged with what we're up to as a team and as part of the much larger Environmental Data Science Group.
+
 ## Members
 
 - [Jo Walsh](https://github.com/metazool/)
