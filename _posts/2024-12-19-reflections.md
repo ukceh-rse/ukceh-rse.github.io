@@ -1,6 +1,6 @@
 ---
 title: "Random reflections at the end of 2024"
-date: 2024-11-26
+date: 2024-12-19
 permalink: /weeknotes/2024/12/reflections/ 
 ---
 
@@ -10,7 +10,7 @@ Perhaps this section of the site should be "monthnotes" rather than weeknotes - 
 
 Colleagues are starting to drift off for the holidays, which in Scotland last for us until Jan 6th. This always feels like a good time to do a small amount of investigative, exploratory work.
 
-A project that more of us will be engaged with next year is the Floods and Droughts Research Infrastructure. UKCEH maintains a network of long-term monitoring stations called COSMOS-UK which use cosmic rays to do soil moisture measurement - the "cosmic" makes it sound so sci-fi! Each of the COSMOS-UK sensors captures an image five times a day - a fish-eye perspective with two hemispheres. It's meant to help assess the state of the site, animal incursion etc, but also offers monitoring of seasonal conditions, and there's a continuous record of images stretching back for ten years. I just saw my first sample of it today; it's a fascinating collection full of unexpected potential.
+A project that more of us will be engaged with next year is the [Floods and Droughts Research Infrastructure](https://fdri.org.uk/). UKCEH maintains a network of long-term monitoring stations called [COSMOS-UK](https://cosmos.ceh.ac.uk/) which use cosmic rays to do soil moisture measurement - the "cosmic" makes it sound so sci-fi! Each of the COSMOS-UK sensors captures an image five times a day - a fish-eye perspective with two hemispheres. It's meant to help assess the state of the site, animal incursion etc, but also offers monitoring of seasonal conditions, and there's a continuous record of images stretching back for ten years. I just saw my first sample of it today; it's a fascinating collection full of unexpected potential.
 
 We're hoping to draw on the more experimental work on image [machine learning pipelines for plankton microscope imagery](https://github.com/NERC-CEH/plankton_ml) when we work on this project; it will be a cloud-based deployment with very different infrastructure expectations, and more engagement from the development team in Environmental Data Science.
 
