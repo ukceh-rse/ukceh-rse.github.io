@@ -1,0 +1,30 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: UKCEH Research Software Engineers
+
+  announcement:
+    content: This site is a work in progress.
+    type: warning
+    icon: exclamation-circle
+
+  navbar:
+    right:
+      - projects.qmd
+      - posts.qmd
+      - people.qmd
+
+      - icon: github
+        href: https://github.com/ukceh-rse
+        target: _blank
+      - icon: codeberg
+
+  page-footer: "This website was created using [Quarto](https://quarto.org/) and [Github pages](https://pages.github.com/)"
+
+  site-url: https://ukceh-rse.github.io/quarto-site
+  repo-url: https://github.com/ukceh-rse/quarto-site
+
+metadata-files:
+  - _format.yml
