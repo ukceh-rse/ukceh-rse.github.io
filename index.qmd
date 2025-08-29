@@ -1,12 +1,22 @@
 ---
 title: UK Centre for Ecology & Hydrology Research Software Engineering Group
-# image:
+listing:
+  id: updates
+  contents: updates/
+  sort: "date desc"
+  type: default
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  max-items: 3
+  max-description-length: 150
 ---
 
-## About
+## About the Group
 
 {{< lipsum 2 >}}
 
-## Enquiries
+## Latest Updates
 
-Link to enquiry form.
+::: {#updates}
+:::

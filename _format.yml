@@ -1,12 +1,5 @@
 # Format config shared by all documents in this site
 
-date-format: long
-date-modified: last-modified
-
-bibliography: bibliography.bib
-copyright: 2025, UK Centre for Ecology & Hydrology Research Software Engineering Group
-license: CC BY
-
 format:
   html:
     code-annotations: hover
@@ -14,12 +7,13 @@ format:
     embed-resources: true
     highlight-style: github
     html-math-method: mathjax
-    link-external-newwindow: true
-    number-sections: true
-    number-depth: 3
+    #link-external-newwindow: true
+    number-sections: false
     tbl-cap-location: bottom
-    toc: true
-    #toc-title: |
-    #  [{{< brand logo medium light >}}]{.light-content}[{{< brand logo medium dark >}}]{.dark-content}
-    toc-depth: 3
-    toc-location: right
+    toc: false
+
+date-format: long
+
+copyright: 2025, UK Centre for Ecology & Hydrology Research Software Engineering Group
+#license: CC BY
+

@@ -11,20 +11,24 @@ website:
     icon: exclamation-circle
 
   navbar:
+    background: "#00678e"
+    foreground: "#eaefec"
     right:
+      - updates.qmd
       - projects.qmd
-      - posts.qmd
+      - recipes.qmd
       - people.qmd
+      - contact.qmd
 
       - icon: github
         href: https://github.com/ukceh-rse
         target: _blank
-      - icon: codeberg
 
   page-footer: "This website was created using [Quarto](https://quarto.org/) and [Github pages](https://pages.github.com/)"
 
   site-url: https://ukceh-rse.github.io/quarto-site
   repo-url: https://github.com/ukceh-rse/quarto-site
+  repo-actions: [edit, source]
 
 metadata-files:
   - _format.yml

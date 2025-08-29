@@ -1,0 +1,20 @@
+---
+title: Matthew Coole
+subtitle: Senior Research Software Engineer
+description: |
+  I am a person
+
+about:
+  template: jolla
+  links:
+    - icon: person-circle
+      text: "Personal Website"
+    - icon: linkedin
+      text: LinkedIn
+    - icon: github
+      text: Github
+    - icon: plus-circle-fill
+      text: "Quarto Pub"
+---
+
+I am interested in XYZ

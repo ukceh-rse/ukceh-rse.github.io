@@ -1,0 +1,20 @@
+---
+title: Robin Long
+subtitle: Senior Research Software Engineer
+image: https://www.ceh.ac.uk/sites/default/files/styles/medium/public/pictures/2024-07/profile-rel-400x400px.png
+description: |
+  I am a person
+
+about:
+  template: jolla
+  image: https://www.ceh.ac.uk/sites/default/files/styles/medium/public/pictures/2024-07/profile-rel-400x400px.png
+  links:
+    - icon: person-circle
+      text: "Personal Website"
+    - icon: linkedin
+      text: LinkedIn
+    - icon: github
+      text: Github
+---
+
+I am interested in XYZ

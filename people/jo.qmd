@@ -1,0 +1,18 @@
+---
+title: Jo Walsh <a href="https://orcid.org/0000-0002-8082-8566"><img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" /></a>
+subtitle: Senior Research Software Engineer
+description: |
+  I am a person
+
+about:
+  template: jolla
+  links:
+    - icon: person-circle
+      text: "Personal Website"
+    - icon: linkedin
+      text: LinkedIn
+    - icon: github
+      text: Github
+---
+
+I am interested in XYZ

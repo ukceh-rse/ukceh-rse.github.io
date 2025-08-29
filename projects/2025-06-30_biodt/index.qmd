@@ -1,0 +1,24 @@
+---
+title: BioDT
+subtitle: Development of the BioDT Recreational Potential Model for Scotland
+image: biodt.svg
+date: 2025-06-30
+author: "[Joe Marsh Rossney](/people/joe.html)"
+
+description: |
+  Brief description of the BioDT project.
+
+Abstract: Something else?
+
+bibliography: references.bib
+---
+
+
+## BioDT
+
+Something something
+
+@MarshRossney2025
+
+![](app.png)
+

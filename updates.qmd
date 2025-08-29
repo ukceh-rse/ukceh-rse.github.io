@@ -1,0 +1,9 @@
+---
+title: Updates
+listing:
+  contents: updates/
+  sort: "date desc"
+  type: default
+  categories: true
+  max-description-length: 150
+---
