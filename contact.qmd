@@ -2,15 +2,22 @@
 title: Contact
 ---
 
-## Work with us
-
-Brief description of the process.
-
-Link to enquiry form.
-
-
-## Get in touch
-
-Contact address.
+You can contact us by email at `rsegroup@ceh.ac.uk` --- this is preferred over contacting individual team members.
 
 We will aim to get back to you within X working days.
+
+<!-- We also have an open-door policy... Jo & Joe share office \#52 at the Edinburgh site. -->
+
+Feel free to drop into our [discussions](https://github.com/ukceh-rse/discussions) on GitHub.
+
+### Work with us
+
+Initial enquiries about working with RSEs should be made to `EDSsupport@ceh.ac.uk`, or you can fill out the [Digital Research enquiry form](https://cehacuk.sharepoint.com/sites/hub-pollution/SitePages/EDS-Enquiry-Form.aspx?csf=1&web=1&e=RtTUNw&CID=170baf8d-d06d-4d6a-b205-1b602e57b78e).
+
+The criteria for allocating RSEs are based on the boldness and ambition of the science, its alignment with [Strategy 2030](https://www.ceh.ac.uk/strategy2030), the furtherance of DRI ambitions, the potential to promote key principles, and the availability of resources to cover the costs of RSEs.
+
+Communication is key.
+If you don't feel your project meets the criteria mentioned above, **please still contact us.**
+We may be able to explore avenues to pull different pieces of work from multiple projects that are looking at the same problem.
+If you are early in the proposal stage, we may be able to help enhance your proposal so that it aligns with the wider UKCEH digital strategy.
+

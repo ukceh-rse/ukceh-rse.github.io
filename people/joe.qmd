@@ -1,26 +1,30 @@
 ---
-title: Joe Marsh Rossney <a href="https://orcid.org/0000-0002-8082-8566"><img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" /></a>
+title: Joe Marsh Rossney
 subtitle: Research Software Engineer
-image: https://www.ceh.ac.uk/sites/default/files/styles/medium/public/pictures/2024-07/marsh-rossney-joe.jpg
+image: "https://www.ceh.ac.uk/sites/default/files/styles/medium/public/pictures/2024-07/marsh-rossney-joe.jpg"
 description: |
-  I am a person
+  Joe's academic background spans theoretical physics, machine learning and education research. He is particularly interested in how mathematical models can compliment other forms of scientific inquiry, and support interdisciplinary learning.
+categories: [Edinburgh]
 
 about:
   template: jolla
-  image: https://www.ceh.ac.uk/sites/default/files/styles/medium/public/pictures/2024-07/marsh-rossney-joe.jpg
+  image: "https://www.ceh.ac.uk/sites/default/files/styles/medium/public/pictures/2024-07/marsh-rossney-joe.jpg"
   links:
-    - icon: person-circle
-      text: "Personal Website"
+    - text: "Personal Website"
+      icon: person-circle
       href: https://github.com/jmarshrossney.github.io
-    - icon: linkedin
-      text: LinkedIn
+    - text: LinkedIn
+      icon: linkedin
       href: https://www.linkedin.com/in/joe-marsh-rossney
-    - icon: github
-      text: Github
+    - text: Github
+      icon: github
       href: https://github.com/jmarshrossney
-    - icon: plus-circle-fill
-      text: "Quarto Pub"
+    - text: "{{< iconify simple-icons:codeberg >}} Codeberg"
+      href: https://codeberg.org/float
+    - text: "{{< iconify simple-icons:quarto >}} Quarto Pub"
       href: https://jmarshrossney.quarto.pub
+    - text: "{{< iconify academicons:orcid >}} Orcid"
+      href: https://orcid.org/0000-0002-8082-8566
+    - text: "{{< iconify academicons:semantic-scholar >}} Semantic Scholar"
+      href: https://www.semanticscholar.org/author/Joe-Marsh-Rossney/2140669734
 ---
-
-I am interested in XYZ

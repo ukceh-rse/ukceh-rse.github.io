@@ -1,0 +1,24 @@
+---
+title: The BioDT Recreational Potential Model for Scotland
+image: biodt.svg
+date: 2025-06-30
+author: "[Joe Marsh Rossney](/people/joe.html)"
+abstract: |
+  Development of the BioDT Recreational Potential Model for Scotland
+
+categories:
+  - BLU
+  - Biodiversity & Land Use
+
+bibliography: references.bib
+---
+
+
+## BioDT
+
+Something something
+
+@MarshRossney2025
+
+![](app.png)
+

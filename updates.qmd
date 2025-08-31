@@ -5,5 +5,7 @@ listing:
   sort: "date desc"
   type: default
   categories: true
-  max-description-length: 150
+  sort-ui: true
+  filter-ui: true
+  fields: [title, subtitle, author, description, date, image, categories, reading-time]
 ---

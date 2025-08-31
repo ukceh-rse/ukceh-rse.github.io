@@ -1,0 +1,19 @@
+---
+title: Sustainable Digital Research Infrastructure for Environmental Science
+date: 2025-08
+author: "[Joe Marsh Rossney](/people/joe.html)"
+
+abstract: |
+  A brief summary of what the SDRI project is and my role in it.
+
+categories:
+  - Active
+  - NCDR
+
+draft: true
+---
+
+:::{.callout-note}
+This is an **active** project.
+:::
+

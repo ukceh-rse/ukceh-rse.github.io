@@ -1,16 +1,15 @@
 ---
-title: People
+title: Members
 listing:
   contents: people/
   type: grid
   grid-columns: 3
   image-height: 180px
   image-placeholder: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png
-  fields: [image, title, subtitle, description]
-  categories: false
+  max-description-length: 500
   sort: "title asc"
-  sort-ui: false
-page-layout: article
-title-block-banner: false
+  fields: [image, title, subtitle, description, categories]
+
+page-layout: article #full
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: UK Centre for Ecology & Hydrology Research Software Engineering Group
+title: UKCEH Research Software Engineers
+
 listing:
   id: updates
   contents: updates/
@@ -12,11 +13,65 @@ listing:
   max-description-length: 150
 ---
 
-## About the Group
+:::: {.columns}
+::: {.column width="60%"}
 
-{{< lipsum 2 >}}
+### Who we are
+
+The RSE group at UKCEH was founded in 2024 by Professor Gordon Blair and Dr Faiza Samreen, who recruited 6 RSEs with diverse backgrounds in industry and academia.
+
+Each [member](/people.html) of the group brings a unique blend of skills and interests, underpinned by _both_ research _and_ software engineering expertise.
+
+As of the 2025 restructure, the RSE team forms part of the Digital Innovation group within the broader National Capability and Digital Research (NCDR) science area.
+
+:::
+::: {.column width="40%"}
+
+<br>
+
+![The RSE team in Lancaster, September 2025.](https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png)
+
+:::
+::::
+
+
+### What we do
+
+We work on a wide range of research [projects](/projects.qmd) across all five [science areas](https://www.ceh.ac.uk/our-science/science-areas).
+Typically our involvement with a project spans a significant fraction of the project's lifecycle --- i.e. months or years --- and we are frequently involved in the planning and bid-writing stage of a project.
+
+We also engage in various activities aligned to the [four 'pillars' of research software engineering -- Figure @fig-pillars].
+
+**{{< iconify mdi:pillar >}} Software Development** \
+We work closely with our colleagues in the Digital Engineering and Digital Assets groups, contributing to the development and maintenance of UKCEH's data and digital research infrastructure. We also contribute to open source software. [Read more](/updates.html#category=software).
+
+{{< iconify mdi:pillar >}} Community
+: We maintain a [community discussion forum](https://github.com/ukceh-rse/community/discussions), organise events, and contribute to special interest groups. [Read more](/updates.html#category=community).
+
+{{< iconify mdi:pillar >}} Training
+: We develop open-source training materials, run courses and workshops, and offer drop-in 'code clinics' for our colleagues. [Read more](/updates.html#category=training).
+
+{{< iconify mdi:pillar >}} Policy
+: We promote the [FAIR principles](https://doi.org/10.15497/RDA00068) for research software. We advocate recognition of software as a research output and argue for proper resourcing for its maintenance. [Read more](/updates.html#category=policy).
+
+
+:::: {.callout-tip appearance="minimal" icon="false" collapse="true"}
+### The four 'pillars' of research software engineering (click to expand)
+
+#### The four 'pillars' of research software engineering
+
+::: {#fig-pillars}
+
+![](assets/pillars.gif)
+
+From J. Cohen, D. S. Katz, M. Barker, N. Chue Hong, R. Haines and C. Jay, "The Four Pillars of Research Software Engineering," in IEEE Software, vol. 38, no. 1, pp. 97-105, Jan.-Feb. 2021, [10.1109/MS.2020.2973362](https://doi.org/10.1109/MS.2020.2973362).
+
+:::
+::::
+
 
 ## Latest Updates
 
 ::: {#updates}
 :::
+

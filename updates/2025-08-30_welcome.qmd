@@ -1,0 +1,50 @@
+---
+title: We made a website
+author: "[Joe Marsh Rossney](/people/joe.qmd)"
+date: 2025-08-30
+abstract: |
+  This is the first post for this page. I describe some things.
+
+categories: [software, community, training, policy]
+draft: true
+---
+
+### Hello world
+
+We made a website.
+
+What you should expect to find:
+
+- Updates, news etc.
+- Projects
+- Tutorials
+
+
+### Why we felt we needed a website
+
+- Growing portfolio of projects and other activities
+- But it's hard to get visibility in UKCEH - big organisation and everyone is busy!
+- Need an easy way to share updates, content
+- Need a place to collect our training materials
+- Need a centralised space so we can just send people a link.
+- Needs to be accessible outside of our org - external collaborators.
+
+
+### Why Quarto?
+
+- Plain text (markdown) based.
+- Used by many in UKCEH
+- Existing [UKCEH brand](https://github.com/ukceh-rse/brand-yml), implemented by Joe.
+- Can render executable notebooks in Python/R/Julia - use the same tool for tutorials.
+
+:::{.callout-tip}
+For instructions on how to apply the UKCEH branding to your own Quarto documents, see HERE.
+:::
+
+### Why not use the Hub?
+
+- Prefer a solution based on plain text files that can be version-controlled.
+- Prefer open-source and open-access - sometimes not clear if a hub page is visible internally or externally.
+- Hub doesn't have the best search functionality, and dates are often missing.
+- We prefer to be in control - we are control freaks.
+

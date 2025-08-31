@@ -1,20 +1,14 @@
 ---
 title: Matthew Coole
 subtitle: Senior Research Software Engineer
+categories: [Lancaster]
 description: |
-  I am a person
+  Matt works to find novel & effective research solutions for projects and helps to encourage software engineering best practices. His background is in large-scale text processing and NLP, & experience applying machine learning and visualisation techniques.
 
 about:
   template: jolla
   links:
-    - icon: person-circle
-      text: "Personal Website"
-    - icon: linkedin
-      text: LinkedIn
-    - icon: github
-      text: Github
-    - icon: plus-circle-fill
-      text: "Quarto Pub"
+    - text: GitHub
+      icon: github
+      href: https://github.com/matthewcoole
 ---
-
-I am interested in XYZ

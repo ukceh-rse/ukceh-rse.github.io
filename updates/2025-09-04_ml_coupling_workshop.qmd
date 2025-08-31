@@ -1,0 +1,14 @@
+---
+title: ICCS Machine Learning Coupling Workshop
+author: "[Joe Marsh Rossney](/people/joe.qmd)"
+date: 2025-09-04
+abstract: |
+  Joe attended a two-day workshop on 'coupling models and machine learning' blahblah, run by the Institute of Computing for Climate Science at the University of Cambridge.
+
+categories: [software]
+draft: true
+---
+
+### Hello world
+
+

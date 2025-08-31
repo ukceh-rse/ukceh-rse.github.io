@@ -3,12 +3,15 @@ project:
   output-dir: _site
 
 website:
-  title: UKCEH Research Software Engineers
+  title: UK Centre for Ecology & Hydrology Research Software Engineers
+  description: Website for the UK Centre for Ecology & Hydrology Research Software Engineering team.
 
   announcement:
     content: This site is a work in progress.
-    type: warning
+    type: danger
     icon: exclamation-circle
+    position: below-navbar
+    dismissable: true
 
   navbar:
     background: "#00678e"
@@ -16,7 +19,8 @@ website:
     right:
       - updates.qmd
       - projects.qmd
-      - recipes.qmd
+      - text: Training
+        href: https://ukceh-rse.github.io/training
       - people.qmd
       - contact.qmd
 
@@ -24,11 +28,18 @@ website:
         href: https://github.com/ukceh-rse
         target: _blank
 
-  page-footer: "This website was created using [Quarto](https://quarto.org/) and [Github pages](https://pages.github.com/)"
+  page-footer: 
+    center: "This website was created using the [UKCEH brand](https://github.com/ukceh-rse/brand-yml) for [Quarto](https://quarto.org/) and is hosted by [Github pages](https://pages.github.com/)."
 
   site-url: https://ukceh-rse.github.io/quarto-site
   repo-url: https://github.com/ukceh-rse/quarto-site
-  repo-actions: [edit, source]
+  repo-actions: [source]
+  repo-link-target: _blank
+
+  open-graph:
+    site-name: UKCEH-RSE
+
+  draft-mode: visible
 
 metadata-files:
   - _format.yml

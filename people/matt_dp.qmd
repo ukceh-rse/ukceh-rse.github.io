@@ -1,20 +1,16 @@
 ---
-title: Matt Dalle Piagge <a href="https://orcid.org/0000-0002-8082-8566"><img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" /></a>
+title: Matt Dalle Piagge
 subtitle: Research Software Engineer
 image: https://www.ceh.ac.uk/sites/default/files/styles/medium/public/pictures/2022-01/matthew-brown-160px.jpg
 description: |
-  I am a person
+  Matt is currently investigating object storage as a solution for reproducible and efficient gridded data workflows. His background is in meteorology/atmospheric physics, and has become more interested in the technology and tools that support our science.
+categories: [Wallingford]
 
 about:
   template: jolla
-  image: https://www.ceh.ac.uk/sites/default/files/styles/medium/public/pictures/2022-01/matthew-brown-160px.jpg?itok=qy9M4ss1
+  image: "https://www.ceh.ac.uk/sites/default/files/styles/medium/public/pictures/2022-01/matthew-brown-160px.jpg?itok=qy9M4ss1"
   links:
-    - icon: person-circle
-      text: "Personal Website"
-    - icon: linkedin
-      text: LinkedIn
-    - icon: github
-      text: Github
+    - text: GitHub
+      icon: github
+      href: https://github.com/mattjbr123
 ---
-
-I am interested in XYZ

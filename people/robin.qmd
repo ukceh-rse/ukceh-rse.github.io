@@ -1,20 +1,16 @@
 ---
 title: Robin Long
 subtitle: Senior Research Software Engineer
-image: https://www.ceh.ac.uk/sites/default/files/styles/medium/public/pictures/2024-07/profile-rel-400x400px.png
+image: "https://www.ceh.ac.uk/sites/default/files/styles/medium/public/pictures/2024-07/profile-rel-400x400px.png"
 description: |
-  I am a person
+  Robin is interested in reproducible research, and encouraging and supporting its use in  creating sustainable software. Robin's background began in experimental particle physics supporting high performance computing
+categories: [Lancaster]
 
 about:
   template: jolla
-  image: https://www.ceh.ac.uk/sites/default/files/styles/medium/public/pictures/2024-07/profile-rel-400x400px.png
+  image: "https://www.ceh.ac.uk/sites/default/files/styles/medium/public/pictures/2024-07/profile-rel-400x400px.png"
   links:
-    - icon: person-circle
-      text: "Personal Website"
-    - icon: linkedin
-      text: LinkedIn
-    - icon: github
-      text: Github
+    - text: GitHub
+      icon: github
+      href: https://github.com/longr
 ---
-
-I am interested in XYZ
