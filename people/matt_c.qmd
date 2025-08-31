@@ -1,9 +1,6 @@
 ---
 title: Matthew Coole
-subtitle: Senior Research Software Engineer
-categories: [Lancaster]
-description: |
-  Matt works to find novel & effective research solutions for projects and helps to encourage software engineering best practices. His background is in large-scale text processing and NLP, & experience applying machine learning and visualisation techniques.
+categories: ["Senior RSE", Lancaster]
 
 about:
   template: jolla
@@ -12,3 +9,5 @@ about:
       icon: github
       href: https://github.com/matthewcoole
 ---
+
+Matt works to find novel & effective research solutions for projects and helps to encourage software engineering best practices. His background is in large-scale text processing and NLP, & experience applying machine learning and visualisation techniques.

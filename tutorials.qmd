@@ -1,0 +1,10 @@
+---
+title: Tutorials
+listing:
+  type: default
+  contents: tutorials/
+  sort: "title desc"
+  categories: true
+  sort-ui: true
+  filter-ui: true
+---

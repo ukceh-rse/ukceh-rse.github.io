@@ -1,9 +1,6 @@
 ---
 title: Jo Walsh
-subtitle: Senior Research Software Engineer
-categories: [Edinburgh]
-description: |
-  Jo works to find novel and effective research solutions for projects and helping to encourage software engineering best practices. Jo has a lot of background in open source geospatial and semantic web
+categories: ["Senior RSE", Edinburgh]
 
 about:
   template: jolla
@@ -12,4 +9,6 @@ about:
       icon: github
       href: https://github.com/metazool
 ---
+
+Jo works to find novel and effective research solutions for projects and helping to encourage software engineering best practices. Jo has a lot of background in open source geospatial and semantic web
 

@@ -1,0 +1,26 @@
+---
+title: How to create UKCEH-branded documents in Quarto
+author:
+  - name: Joe Marsh Rossney
+    url: https://ukceh-rse.github.io/people/joe.html
+date: 2025-08-31
+abstract: |
+  This tutorials demonstrates how to apply UKCEH branding (fonts, colours and logos) to Quarto documents (such as this website).
+
+categories: [Quarto]
+---
+
+## Introduction
+
+### What is a "brand YAML"?
+
+### Where is the UKCEH brand YAML?
+
+
+## Using the command line
+
+...
+
+## Using RStudio
+
+...

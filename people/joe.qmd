@@ -1,12 +1,10 @@
 ---
 title: Joe Marsh Rossney
-subtitle: Research Software Engineer
 image: "https://www.ceh.ac.uk/sites/default/files/styles/medium/public/pictures/2024-07/marsh-rossney-joe.jpg"
-description: |
-  Joe's academic background spans theoretical physics, machine learning and education research. He is particularly interested in how mathematical models can compliment other forms of scientific inquiry, and support interdisciplinary learning.
-categories: [Edinburgh]
+categories: [RSE, Edinburgh]
 
 about:
+  id: about
   template: jolla
   image: "https://www.ceh.ac.uk/sites/default/files/styles/medium/public/pictures/2024-07/marsh-rossney-joe.jpg"
   links:
@@ -28,3 +26,13 @@ about:
     - text: "{{< iconify academicons:semantic-scholar >}} Semantic Scholar"
       href: https://www.semanticscholar.org/author/Joe-Marsh-Rossney/2140669734
 ---
+
+Joe's academic background spans theoretical physics, machine learning and education research. He is particularly interested in how mathematical models can compliment other forms of scientific inquiry, and support interdisciplinary learning.
+
+### Background
+
+x
+
+### Projects
+
+x

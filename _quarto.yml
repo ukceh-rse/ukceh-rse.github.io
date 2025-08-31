@@ -20,13 +20,11 @@ website:
       - updates.qmd
       - projects.qmd
       - text: Training
-        href: https://ukceh-rse.github.io/training
+        menu:
+          - courses.qmd
+          - tutorials.qmd
       - people.qmd
       - contact.qmd
-
-      - icon: github
-        href: https://github.com/ukceh-rse
-        target: _blank
 
   page-footer: 
     center: "This website was created using the [UKCEH brand](https://github.com/ukceh-rse/brand-yml) for [Quarto](https://quarto.org/) and is hosted by [Github pages](https://pages.github.com/)."
