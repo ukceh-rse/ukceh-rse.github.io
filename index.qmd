@@ -72,7 +72,7 @@ We work closely with our colleagues in the Digital Engineering and Digital Asset
 : We are active in the wider RSE community, contributing to events and special interest groups. We maintain a [community discussion forum](https://github.com/ukceh-rse/community/discussions) for research software at UKCEH. [Read more](/updates.html#category=community).
 
 {{< iconify mdi:pillar >}} Training
-: We develop open-source [training materials](/tutorials.qmd), run [workshops](/workshops.qmd), and offer drop-in 'code clinics' for our colleagues. [Read more](/updates.html#category=training).
+: We develop open-source [training materials](/tutorials.html), run [workshops](/workshops.qmd), and offer drop-in 'code clinics' for our colleagues. [Read more](/updates.html#category=training).
 
 {{< iconify mdi:pillar >}} Policy
 : We promote the 'FAIR' principles[^3] for research software. We advocate recognition of software as a research output and argue for proper resourcing for its maintenance. [Read more](/updates.html#category=policy).
