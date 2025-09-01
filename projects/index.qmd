@@ -2,9 +2,12 @@
 title: Projects
 listing:
   type: grid
-  contents: projects/
+  contents: 
+    - .
+    - "!./index.qmd"
   sort: "date desc"
   categories: true
   sort-ui: true
   filter-ui: true
+  fields: [image, title, subtitle, author, date, categories]
 ---

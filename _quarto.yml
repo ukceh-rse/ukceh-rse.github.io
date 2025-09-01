@@ -17,13 +17,13 @@ website:
     background: "#00678e"
     foreground: "#eaefec"
     right:
-      - updates.qmd
-      - projects.qmd
+      - updates/index.qmd
+      - projects/index.qmd
       - text: Training
         menu:
-          - courses.qmd
+          - workshops.qmd
           - tutorials.qmd
-      - people.qmd
+      - people/index.qmd
       - contact.qmd
 
   page-footer: 

@@ -1,7 +1,9 @@
 ---
 title: Members
 listing:
-  contents: people/
+  contents: 
+    - "*.qmd"
+    - "!index.qmd"
   type: grid
   grid-columns: 3
   image-height: 180px

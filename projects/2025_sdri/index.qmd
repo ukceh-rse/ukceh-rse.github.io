@@ -1,5 +1,6 @@
 ---
-title: Sustainable Digital Research Infrastructure for Environmental Science
+title: Sustainable DRI
+subtitle: Sustainable Digital Research Infrastructure for Environmental Science
 date: 2025-08
 author: "[Joe Marsh Rossney](/people/joe.html)"
 

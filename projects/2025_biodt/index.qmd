@@ -1,7 +1,9 @@
 ---
-title: The BioDT Recreational Potential Model for Scotland
+title: BioDT
+subtitle: Development of the BioDT Recreational Potential Model for Scotland
 image: biodt.svg
 date: 2025-06-30
+last-modified: last-modified
 author: "[Joe Marsh Rossney](/people/joe.html)"
 abstract: |
   Development of the BioDT Recreational Potential Model for Scotland
@@ -18,7 +20,15 @@ bibliography: references.bib
 
 Something something
 
-@MarshRossney2025
+[@Dick2022] - hard/soft personas
+
+[@Rolph2024] - describe "digital twin" combining Recreational Potential component and biodiversity component.
+
+[@MarshRossney2025] - code
+
+[@MarshRossney2025b] - reports
+
+[@Tigli2025] - computed outputs for all of Scotland
 
 ![](app.png)
 
