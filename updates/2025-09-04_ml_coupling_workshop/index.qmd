@@ -5,12 +5,138 @@ author:
     url: "https://ukceh-rse/github.io/people/joe.html"
 date: 2025-09-04
 abstract: |
-  Joe attended a two-day workshop on 'coupling models and machine learning' blahblah, run by the Institute of Computing for Climate Science at the University of Cambridge.
+  Joe attended a two-day workshop on hybrid Machine Learning x numerical models, run by the Institute of Computing for Climate Science at the University of Cambridge.
 
 categories: [software]
 draft: true
+
+bibliography: references.bib
+nocite: |
+  @*
+
+toc: true
 ---
 
-### Hello world
+## Intro
 
+Earlier this week I was fortunate enough to attend the [Machine Learning Coupling workshop](https://cambridge-iccs.github.io/ml-coupling-workshop/) run by the [Institute of Computing for Climate Science](https://iccs.cam.ac.uk/) at the University of Cambridge. The workshop name (“Machine Learning Coupling”) has a slightly odd ring to it, but is referring to the challenge of constructing “hybrid” numerical/statistical models that graft machine learning components (the statistical, or data-driven part) onto a traditional numerical modelling rootstock.
 
+Most speakers and attendees were climate modellers to first approximation, although there was a smattering of ‘outsiders’ including plasma physicists, statisticians, mathematical biologists, and me.
+
+### Why is this interesting?
+
+Hybrid modelling has had the aura of the Next Big Thing™ for some years now,[^1] because “Machine Learning can’t completely replace X, _obviously_,[^2] it needs to be _combined_ with it.”
+
+[^1]: This is often accompanied by the claim that machine learning models need to become more “physics-informed”. Again, this is something that sounds eminently sensible but is really just more sloganeering, the origins of which (I think) can be traced back to the unfortunately-named [“Physics Informed Neural Network”](https://arxiv.org/abs/1711.10561).
+
+[^2]: It fairness this conclusion is not entirely obvious based on recent press. For example, Machine Learning-based weather forecasts are [currently performing on-par with or better}(https://sites.research.google/gr/weatherbench/) than traditional numerical ensembles for medium-range predictions. However, this is probably a reflection of how poorly traditional models are able to take advantage of observations (data assimilation), rather than because physics priors are not useful. 
+
+I think this is broadly right.[^3] People like me (but smarter) are interested in this because they are convinced that somewhere in the hybrid modelling space lies a best-of-both-worlds situation, which fully exploits our prior knowledge about the system we’re modelling and augments those priors with new knowledge encoded into statistical models that have been fit to data.
+
+[^3]: My own (admittedly rather narrow) experiences with machine learning in physics were a lesson in the judicious use of physical and mathematical priors, which tended to produce smaller, cheaper models that performed far better.
+
+### Why is this hard?
+
+Building complex hybrid models extremely challenging — less like Lego and more like organ transplant surgery.
+
+This shouldn’t be surprising really; numerical modelling communities and statistical/machine learning communities established their own separate ecosystems largely independent of one another over the course of decades. Hence, existing models, methodologies and tools were not designed with this sort of coupling in mind.
+
+#### An illustration
+
+Let’s take a simple example to make this more explicit. Say I train a neural network in PyTorch with the intention of replacing some (highly uncertain) empirical component of a Fortran model. The neural network seems to achieve a very high prediction accuracy — maybe I even took the time to benchmark it against the original empirical model (hooray, let’s publish a paper!). 
+
+What on Earth do I do next? How do I ‘put’ the neural network in the Fortran model?
+
+The most obvious approach is to pause the Fortran model, write the required network inputs to some location in memory, transfer them to the GPU, execute the forward pass of the neural network, transfer the outputs back to the CPU memory, read them back into the Fortran model and continue the run. This is 
+
+I could manually implement the forward pass of the neural network in Fortran, and load the weights and biases from a CSV file at runtime. This is actually a pretty good option so long as I have no intention of making any further changes to the model architecture (e.g. changing any layer sizes or adding another layer) and I’m not interested in further “online” training while the model is being run (and I know how to code up a neural network in Fortran).
+
+Otherwise what I’m really left with is a choice between “some kind of wrapper” that allows me to call PyTorch models directly from Fortran, or rewriting my Fortran model in a more Machine-Learning friendly language such as Julia.
+
+### What strategies for coupling are currently being used?
+
+Fortunately the second-last of the above options (“some kind of wrapper”) has been made possible thanks to a significant effort by the folks at ICCS in the form of [FTorch](https://cambridge-iccs.github.io/FTorch/) [@Atkinson2025]. _A lot_ of the workshop attendees were using FTorch already.
+
+There were three main strategies vocalised by participants at this workshop.
+
+```{mermaid}
+flowchart TD
+    A["Building hybrid ML/numerical models"]
+
+    B["Implement forward pass in pure Fortran<br/>• Point one<br/>• Point two"]
+    C["Use Ftorch<br/>• Note A<br/>• Note B"]
+    D["Rewrite model in ML-friendly language<br/>• Detail X<br/>• Detail Y"]
+    E["Jax<br/>• Subpoint i<br/>• Subpoint ii"]
+    F["Julia<br/>• Subpoint α<br/>• Subpoint β"]
+
+    A --> B
+    A --> C
+    A --> D
+
+    D --> E
+    D --> F
+```
+
+There was a brief mention of a Fortran-native automatic differentiation (AD) library, but it sounded like a case of “there’s this one guy trying to do it.”
+
+### Highlight \#1 - differentiable programming
+
+The [talk](https://cambridge-iccs.github.io/ml-coupling-workshop/programme.html#valentin) that I was looking forward to most was one on [differentiable programming](https://en.wikipedia.org/wiki/Differentiable_programming), jointly delivered by two very impressive scientist/RSEs and Julia advocates, who also happen to be the brains behind the AD library [Enzyme](https://enzyme.mit.edu/julia/stable/)[^4] and the modular atmospheric circulation model [SpeedyWeather](https://speedyweather.github.io/SpeedyWeatherDocumentation/stable/).
+
+[^4]: Enzyme is pretty rad actually. AD is performed at the intermediate representation level ([MLIR](https://mlir.llvm.org/)), which means it can work with any [LLVM](https://llvm.org/)-based lang including C, C++, Rust, and even modern Fortran!
+
+A wide range of problems can be attacked by optimising a differentiable scalar ‘loss’ function using variations of gradient descent. For modellers, I’m talking about things like sensitivity analysis, parameter calibration and data assimilation, but of course the most well-known example is gradient-based Machine Learning.
+
+Not all models are differentiable, even in principle. Many traditional models contain abrupt transitions between different regimes, often generated by control flow (e.g. if-else) statements, at which point the derivative is undefined.[^5] Others contain embedded stochastic components which might rely on non-differentiable algorithms such as rejection sampling.
+
+[^5]: Point-like discontinuities (i.e. piecewise differentiable functions) are actually perfectly tolerable, although abrupt changes in gradients can lead to numerical instabilities. But many AD frameworks will just refuse to differentiate through control flow logic.
+
+Still, the main barrier is just the software engineering. Some of these models have been slowly built up over decades and are both enormous and enormously complex. It _might_ be feasible to rewrite individual components to make them differentiable, but in many cases components are so deeply intertwined that doing so would trigger a cascade of complex changes throughout the rest of the model.
+
+#### Which language for differentiable programming?
+
+In a breakout group on the same topic there was a roughly equal three-way split between Julia users, Jax users, and a “manual differentiation” group implementing adjoints and tangents manually in Fortran.
+
+I’m spiritually in the Julia camp, but for a few reasons will probably stick with Jax for now. The main reason is that I’m far more research than I am software engineer, and my skill and time are both too limited to dig myself out of holes caused by undocumented upstream bugs. The other main reason is that most of my colleagues at UKCEH use R, so it’s already asking a lot to persuade them to work with Python, and Julia might be a step too far. In the longer term I think Julia could become my go-to language for modelling problems, if not data problems, and I’m especially looking forward to exploring the [CliMA ecosystem](https://github.com/CliMA). 
+
+### Highlight \#2 - Data-driven discovery of a reduced complexity model for cloud cover
+
+I liked this [talk](https://cambridge-iccs.github.io/ml-coupling-workshop/programme.html#julien) a lot because it combined the high-level picture with some solid practical advice gained by actually building the thing. The section I want to highlight here is about using Machine Learning to improve the cloud-cover component of the [ICON climate model](https://www.icon-model.org/).
+
+Initially they went down the classic route of training a vanilla feedforward neural network on some (cloud‑cover) data and transplanting the trained network into the model. It worked ok — and at this point many people would simply say job done, or optimise some hyper-parameters — but they wanted something faster and more interpretable.
+
+They replaced the neural network with an analytical ansatz, and used the same cloud cover data to determine the most important terms and their coefficients by [symbolic regression](https://en.wikipedia.org/wiki/Symbolic_regression). Notably, the procedure revealed an important term that is typically missing from standard parametrisations. 
+
+This resulted in a model with just a handful of coefficients multiplying terms that have unambiguous physical interpretations, which nevertheless performed on par with the neural network while being much faster to compute. To top things off, they were able to impose physical constraints on the analytical model that would have been much more difficult to achieve with the neural network.
+
+Details about this work can be found in @Grundner2023.
+
+### Highlight \#3 - on GPUs and the future of scientific computing
+
+I’m paraphrasing a very interesting conversation that I was on the periphery of.
+
+We (scientists and publicly funded research organisations) are no longer the primary customers for GPU vendors — as one put it, “we are small fish”. We should not therefore expect the Machine Learning ecosystem to prioritise our needs. One early warning sign is, some new GPU lines de‑emphasise or drop Float64, which suits data and Machine Learning workloads but makes them unsuitable for much scientific numerical modelling.
+
+These worries would be irrelevant if we cannot afford to buy high-end GPUs in the first place. Given the rapid increase in GPU costs and the potential slowing down of public sector investment, it’s certainly not guaranteed that we will always be able to find the money.
+
+So what’s the silver lining?
+
+Well… GPUs are not a good solution to every computational problem. Porting most existing scientific codes to GPU would probably result in slower execution and massive amounts of wasted time and energy due to under-utilisation of the GPU and expensive data transfer between devices.[^6]
+
+[^6]: Generally speaking, small problems (including small ML problems) are faster on CPU unless you can move the entire problem to the GPU (like [Oceananigans](https://github.com/CliMA/Oceananigans.jl)).
+
+We probably need to be much more thoughtful and intentional about which problems demand acceleration that is best served by GPUs (as opposed to other optimisations) *and* can be reformulated (parallelised), implemented, and scaled so as to effectively saturate the GPU, and minimise waste / interleaves operations efficiently.
+
+### Reflections
+
+It is easy for me to see why the Julia folks decided to peel off and start again from a clean slate, using a modern language that makes it easy to build in differentiability (and other nice things) from the start. That said, I have enormous respect for those who choose to dedicate their time to getting more out of existing models. For me, it is clear that both approaches are important and need to happen in tandem.
+
+We should acknowledge that the models we rely on now cannot be smoothly updated, and that innovation will be severely constrained if we pour all of our resources into their maintenance. At the same time, there is a huge amount of valuable knowledge embedded in these communities and the models themselves, which needs to be conserved even as the next generation of models ramp up.
+
+From my relatively uninformed perspective, the biggest challenge is to figure out sustainable funding model supports the graceful continuation of existing models and communities while making space for the ‘disruptors’ who want to move far more quickly — that is, give them a genuine alternative to going to work for Google or NVidia.
+
+### On a final note
+
+I’ve never been to Cambridge before and it was really quite lovely — especially the old town and the college who put us up — although to me the whole city gave off distinctly ‘school’ vibes. Walking through well-kept grounds to an ancient dining hall,[^7] I kept expecting to be called to attention by a gowned professor chastising me for not wearing my clothes properly or sufficiently embodying the spirit of Selwyn College.
+
+[^7]: Walls lined with portraits of old white dudes staring down at you while you eat - check.
