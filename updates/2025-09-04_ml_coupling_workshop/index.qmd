@@ -45,20 +45,20 @@ This shouldn’t be surprising really; numerical modelling communities and stati
 
 #### An illustration
 
-Let’s take a simple example to make this more explicit. Say I train a neural network in PyTorch with the intention of replacing some (highly uncertain) empirical component of a Fortran model. The neural network seems to achieve a very high prediction accuracy — maybe I even took the time to benchmark it against the original empirical model (hooray, let’s publish a paper!). 
+Let’s take a simple example to make this more explicit. Say I train a neural network in PyTorch with the intention of replacing some highly uncertain empirical component of a Fortran model. The neural network seems to achieve a very high prediction accuracy, so I quickly publish a paper to tell everyone about this breakthrough that will result in faster and more accurate model predictions (maybe I even took the time to benchmark it against the original empirical model).
 
-What on Earth do I do next? How do I ‘put’ the neural network in the Fortran model?
+So now what? How do I actually ‘put’ the neural network in the Fortran model?
 
 One possible approach is to pause the execution of the Fortran model just before the substituted component is called, write the required network inputs to some location in memory, load these inputs into PyTorch and execute the forward pass of the neural network, write the network outputs to memory, read them back into the Fortran model and continue the run. If it's not obvious why this is a bad approach, you might consider a brief skim of [this Wikipedia page](https://en.wikipedia.org/wiki/I/O_bound).
 
 I could, instead, manually implement the forward pass of the neural network in Fortran, loading the weights and biases from a CSV file at runtime. This is actually a pretty good option provided I have no intention of making any further changes to the model architecture (e.g. changing any layer sizes or adding another layer) and I’m not interested in “online” training while the model is being run. Oh, and I need to know how to code up a neural network in Fortran.
 
-Otherwise what I’m really left with is a choice between “some kind of wrapper” that allows me to call PyTorch models directly from Fortran, or rewriting my Fortran model in a more Machine-Learning friendly language such as Julia.
+Otherwise what I’m really left with is a choice between “some kind of wrapper” that allows me to call PyTorch models directly from Fortran, or rewriting the Fortran model in a more ML friendly language such as Julia.
 
 
 ### What strategies for coupling are currently being used?
 
-Fortunately the second-last of the above options (“some kind of wrapper”) has been made possible thanks to a significant effort by the folks at ICCS in the form of [FTorch](https://cambridge-iccs.github.io/FTorch/) [@Atkinson2025]. _A lot_ of the workshop attendees were using FTorch already.
+Fortunately the second-last of the above options (“some kind of wrapper”) has been made possible thanks to a significant effort by the folks at ICCS in the form of [FTorch](https://cambridge-iccs.github.io/FTorch/) [@Atkinson2025]. _A lot_ of workshop attendees were using FTorch already.
 
 There were three main strategies vocalised by participants at this workshop.
 
@@ -67,10 +67,10 @@ flowchart TD
     A["Building hybrid ML/numerical models"]
 
     B["Implement forward pass in pure Fortran"]
-    C["Use Ftorch"]
+    C["Use Ftorch (Fortran + PyTorch)"]
     D["Rewrite model in ML-friendly language"]
-    E["Jax<br/>(Feels like NumPy)"]
-    F["Julia<br/>(Feels like Fortran)"]
+    E["Jax"]
+    F["Julia"]
 
     A --> B
     A --> C
@@ -82,13 +82,13 @@ flowchart TD
 
 There was a brief mention of a Fortran-native automatic differentiation (AD) library, but it sounded like a case of “there’s this one guy trying to do it.”
 
-Up to now I haven't even mentioned CPU--GPU data transfer. This can be a significant bottleneck, frequently mitigating any performance gains from executing the neural network on the GPU. Projects like [Oceananigans](https://clima.github.io/OceananigansDocumentation/stable/) [@Silvestri2023] --- the "spiritual successor" to MITgcm --- go much further than translating the code from Fortran to Julia; they completely overhaul the design to target massive parallelism, so that the entire model (not just ML components) run efficiently on GPUs.
+Up to now I haven't even mentioned CPU--GPU data transfer. This can be a significant bottleneck, frequently mitigating any performance gains from executing the neural network on the GPU. Projects like [Oceananigans](https://clima.github.io/OceananigansDocumentation/stable/) [@Silvestri2023] --- the "spiritual successor" to MITgcm --- go much further than translating the code from Fortran to Julia; they completely overhaul the design so that the _entire model_, not just the ML components, run efficiently on GPUs.
 
 ## Highlights
 
 ### \#1 - Differentiable programming
 
-The [talk](https://cambridge-iccs.github.io/ml-coupling-workshop/programme.html#valentin) that I was looking forward to most was one on [differentiable programming](https://en.wikipedia.org/wiki/Differentiable_programming), jointly delivered by two very impressive scientist/RSEs and Julia advocates, who also happen to be the brains behind the AD library [Enzyme](https://enzyme.mit.edu/julia/stable/)[^4] and the modular atmospheric circulation model [SpeedyWeather](https://speedyweather.github.io/SpeedyWeatherDocumentation/stable/).
+The [talk](https://cambridge-iccs.github.io/ml-coupling-workshop/programme.html#valentin) that I was looking forward to most was one on [differentiable programming](https://en.wikipedia.org/wiki/Differentiable_programming), jointly delivered by two very impressive scientist/RSEs and Julia advocates, who also happen to be the brains behind the AD library [Enzyme](https://enzyme.mit.edu/julia/stable/)[^4] [@Moses2020] and the modular atmospheric circulation model [SpeedyWeather](https://speedyweather.github.io/SpeedyWeatherDocumentation/stable/) [@Klower2024].
 
 [^4]: Enzyme is pretty rad. AD is performed at the intermediate representation level ([MLIR](https://mlir.llvm.org/)), which means it can work with any [LLVM](https://llvm.org/)-based language including C, C++, Rust, and even modern Fortran!
 
@@ -102,9 +102,9 @@ Still, the main barrier is just the software engineering. Some of these models h
 
 #### Which language for differentiable programming?
 
-In a breakout group on the same topic there was a roughly equal three-way split between Julia users, Jax users, and a “manual differentiation” group implementing adjoints and tangents manually in Fortran.
+In a breakout group on the same topic there was a roughly equal three-way split between Julia users, Jax users, and a 'manual differentiation' group implementing adjoints and tangents manually in Fortran.
 
-I’m spiritually in the Julia camp, but for a few reasons will probably stick with Jax for now. The main reason is that I’m far more research than I am software engineer, and my skill and time are both too limited to dig myself out of holes caused by undocumented upstream bugs. The other main reason is that most of my colleagues at UKCEH use R, so it’s already asking a lot to persuade them to work with Python, and Julia might be a step too far. In the longer term I think Julia could become my go-to language for modelling problems, if not data problems, and I’m especially looking forward to exploring the [CliMA ecosystem](https://github.com/CliMA). 
+I’m spiritually in the Julia camp, but for a few reasons will probably stick with Jax for now. The main reason is that I’m far more research than I am software engineer, and too limited in both skill and time to dig myself out of holes caused by undocumented upstream bugs. The other main reason is that most of my colleagues at UKCEH use R, so it’s already asking a lot to persuade them to work with Python, and Julia might be a step too far. In the longer term I think Julia could become my go-to language for modelling problems, if not data problems, and I’m especially looking forward to exploring the [CliMA ecosystem](https://github.com/CliMA). 
 
 ### \#2 - Data-driven discovery of a reduced complexity model for cloud cover
 
@@ -122,21 +122,21 @@ Details about this work can be found in @Grundner2023.
 
 I’m paraphrasing a very interesting conversation that I was on the periphery of.
 
-We (scientists and publicly funded research organisations) are no longer the primary customers for GPU vendors — as one put it, “we are small fish”. We should not therefore expect the machine learning ecosystem to prioritise our needs. One early warning sign is, some new GPU lines de‑emphasise or drop Float64, which suits data and machine learning workloads but makes them unsuitable for much scientific numerical modelling.
+We (scientists and publicly funded research organisations) are no longer the primary customers for GPU vendors — as one put it, “we are small fish”. We should not therefore expect the machine learning ecosystem to prioritise our needs. One early warning sign is some new GPU lines de-prioritising or even dropping Float64, which suits data and machine learning workloads but makes them unsuitable for much scientific numerical modelling.
 
-These worries would be irrelevant if we cannot afford to buy high-end GPUs in the first place. Given the rapid increase in GPU costs and the potential slowing down of public sector investment, it’s certainly not guaranteed that we will always be able to find the money.
+These worries will be irrelevant if we cannot afford to buy high-end GPUs in the first place. Given the rapid increase in GPU costs and the potential slowing down of public sector investment, it’s certainly not guaranteed that we will always be able to find the money.
 
 So what’s the silver lining?
 
 Well… GPUs are not a good solution to every computational problem. Porting most existing scientific codes to GPU would probably result in slower execution and massive amounts of wasted time and energy due to under-utilisation of the GPU and expensive data transfer between devices.[^6]
 
-[^6]: Generally speaking, small problems (including small ML problems) are faster on CPU unless you can move the entire problem to the GPU (like [Oceananigans](https://github.com/CliMA/Oceananigans.jl)).
+[^6]: Generally speaking, small problems (including small ML problems) are faster on CPU unless you can move the entire problem to the GPU (like Oceananigans).
 
 We probably need to be much more thoughtful and intentional about which problems demand acceleration that is best served by GPUs (as opposed to other optimisations) *and* can be reformulated (parallelised), implemented, and scaled so as to effectively saturate the GPU, and minimise waste / interleaves operations efficiently.
 
 ## Summary & Reflections
 
-It is easy for me to see why the Julia folks decided to peel off and start again from a clean slate, using a modern language that makes it easy to build in differentiability and other nice things from the foundations. That said, I have enormous respect for those who choose to dedicate their time to getting more out of existing models. For me, it is clear that both approaches are important and need to happen in tandem.
+It is easy for me to see why the Julia folks decided to peel off and start again from a clean slate, using a modern language that makes it easy to build in differentiability, GPU-optimisation and other nice things from the foundations. This is certainly the direction I intend to persue in my work. That said, I have enormous respect for those who choose to dedicate their time to getting more out of existing models. For me, it is clear that both approaches are important and need to happen in tandem.
 
 We should acknowledge that the models we rely on now cannot be smoothly updated, and that innovation will be severely constrained if we pour _all_ of our resources into their maintenance. At the same time, there is a huge amount of valuable knowledge embedded in these communities and in the models themselves, which needs to be conserved even as the next generation of models ramp up.
 
