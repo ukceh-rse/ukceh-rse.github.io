@@ -92,9 +92,9 @@ Up to now I haven't even mentioned CPU--GPU data transfer. This can be a signifi
 
 ### \#1 - Differentiable programming
 
-The [talk](https://cambridge-iccs.github.io/ml-coupling-workshop/programme.html#valentin) that I was looking forward to most was one on [differentiable programming](https://en.wikipedia.org/wiki/Differentiable_programming), jointly delivered by two very impressive scientist/RSEs and Julia advocates, who also happen to be the brains behind the AD library [Enzyme](https://enzyme.mit.edu/julia/stable/)[^4] [@Moses2020] and the modular atmospheric circulation model [SpeedyWeather](https://speedyweather.github.io/SpeedyWeatherDocumentation/stable/) [@Klower2024].
+The [talk](https://cambridge-iccs.github.io/ml-coupling-workshop/programme.html#valentin) that I was looking forward to most was one on [differentiable programming](https://en.wikipedia.org/wiki/Differentiable_programming), jointly delivered by two very impressive scientist/RSEs and Julia advocates, who also happen to be the brains behind the AD library [Enzyme](https://enzyme.mit.edu/julia/stable/)[^4] [@Moses2020] and the modular atmospheric circulation model [SpeedyWeather](https://speedyweather.github.io/SpeedyWeatherDocumentation/stable/) [@Klower2024]. The AD/Enzyme part of this talk is published online [here](https://vchuravy.dev/talks/2025_09_03-Cambridge-ICCS/).
 
-[^4]: Enzyme is pretty rad. AD is performed at the intermediate representation level ([MLIR](https://mlir.llvm.org/)), which means it can work with any [LLVM](https://llvm.org/)-based language including C, C++, Rust, and even modern Fortran!
+[^4]: Enzyme is pretty rad. AD is performed at the intermediate representation level ([MLIR](https://mlir.llvm.org/)), which means it can work with any [LLVM](https://llvm.org/)-based language including C, C++, Rust, and even modern Fortran! 
 
 A wide range of problems can be attacked by optimising a differentiable scalar ‘loss’ function using variations of gradient descent. For modellers, I’m talking about things like sensitivity analysis, parameter calibration and data assimilation, but of course the most well-known example is gradient-based machine learning.
 

@@ -22,7 +22,7 @@ listing:
 
 The RSE group at UKCEH was founded in 2024 by Professor Gordon Blair and Dr Faiza Samreen, who recruited six RSEs with diverse backgrounds in research and industry.
 
-Each [member](/people.html) of the group brings a unique blend of skills and interests, underpinned by _both_ research _and_ software engineering expertise.
+Each [member](/people/index.qmd) of the group brings a unique blend of skills and interests, underpinned by _both_ research _and_ software engineering expertise.
 
 As of the 2025 restructure, the RSE team forms part of the Digital Innovation group within the broader National Capability and Digital Research (NCDR) science area.
 
@@ -39,7 +39,7 @@ As of the 2025 restructure, the RSE team forms part of the Digital Innovation gr
 
 ### What we do
 
-We work on a wide range of research [projects](/projects.html) across all five science areas.[^1]
+We work on a wide range of research [projects](/projects/index.qmd) across all five science areas.[^1]
 Typically our involvement with a project spans a significant fraction of the project's lifecycle --- i.e. months or years --- and we are frequently involved in the planning and bid-writing stage of a project.
 
 [^1]: Since 2025, UKCEH has five science areas:
@@ -64,18 +64,18 @@ We also engage in various activities aligned to the four 'pillars' of research s
     :::
 
 **{{< iconify mdi:pillar >}} Software Development** \
-We work closely with our colleagues in the Digital Engineering and Digital Assets groups, contributing to the development and maintenance of UKCEH's data and digital research infrastructure. [Read more](/updates.html#category=software).
+We work closely with our colleagues in the Digital Engineering and Digital Assets groups, contributing to the development and maintenance of UKCEH's data and digital research infrastructure. [Read more](/updates/#category=software).
 
 <!-- Contributions to open source software? -->
 
 {{< iconify mdi:pillar >}} Community
-: We are active in the wider RSE community, contributing to events and special interest groups. We maintain a [community discussion forum](https://github.com/ukceh-rse/community/discussions) for research software at UKCEH. [Read more](/updates.html#category=community).
+: We are active in the wider RSE community, contributing to events and special interest groups. We maintain a [community discussion forum](https://github.com/ukceh-rse/community/discussions) for research software at UKCEH. [Read more](/updates/#category=community).
 
 {{< iconify mdi:pillar >}} Training
-: We develop open-source [training materials](/tutorials.html), run [workshops](/workshops.qmd), and offer drop-in 'code clinics' for our colleagues. [Read more](/updates.html#category=training).
+: We develop open-source [training materials](/tutorials/index.qmd), run [workshops](/workshops.qmd), and offer drop-in 'code clinics' for our colleagues. [Read more](/updates/#category=training).
 
 {{< iconify mdi:pillar >}} Policy
-: We promote the 'FAIR' principles[^3] for research software. We advocate recognition of software as a research output and argue for proper resourcing for its maintenance. [Read more](/updates.html#category=policy).
+: We promote the 'FAIR' principles[^3] for research software. We advocate recognition of software as a research output and argue for proper resourcing for its maintenance. [Read more](/updates/#category=policy).
 
 [^3]: **FAIR** stands for
 
@@ -94,5 +94,5 @@ We work closely with our colleagues in the Digital Engineering and Digital Asset
 ::: {#updates}
 :::
 
-[More updates...](/updates.html)
+[More updates...](/updates/)
 
