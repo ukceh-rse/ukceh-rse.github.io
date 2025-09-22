@@ -1,0 +1,15 @@
+---
+title: RSECon 2025
+author:
+  - name: Joe Marsh Rossney
+    url: "https://ukceh-rse/github.io/people/joe.html"
+  - name: Matt Dalle Piagge
+  - name: Robin Long
+date: 2025-09-11
+abstract: |
+  Three of us attended the annual Research Software Engineering conference.
+
+categories: [software, community]
+draft: true
+---
+

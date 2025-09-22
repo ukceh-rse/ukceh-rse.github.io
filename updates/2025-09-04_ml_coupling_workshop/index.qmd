@@ -1,5 +1,6 @@
 ---
 title: ICCS Machine Learning Coupling Workshop
+image: bridge.jpg
 author:
   - name: Joe Marsh Rossney
     url: "https://ukceh-rse/github.io/people/joe.html"
@@ -8,7 +9,6 @@ abstract: |
   Joe attended a two-day workshop on hybrid Machine Learning x numerical models, run by the Institute of Computing for Climate Science at the University of Cambridge.
 
 categories: [software, community]
-draft: true
 
 bibliography: references.bib
 nocite: |
@@ -25,11 +25,11 @@ Most speakers and attendees were climate modellers to first approximation, altho
 
 ### Why is this interesting?
 
-Hybrid modelling has had the aura of the Next Big Thing™ for some years now,[^1] because
+Hybrid modelling has had the aura of a Next Big Thing™ for some years now, because
 
-> “machine learning can’t completely replace physics-based modelling, _obviously_,[^2] they need to be _combined_.”
+> “machine learning can’t completely replace physics-based modelling, _obviously_[^2] --- they need to be _combined_.”
 
-[^1]: This is often accompanied by the claim that machine learning models need to become more “physics-informed”. Again, this is something that sounds eminently sensible but is really just more sloganeering, the origins of which (I think) can be traced back to the unfortunately-named [“Physics Informed Neural Network”](https://arxiv.org/abs/1711.10561).
+<!-- [^1]: Calls for more hybrid modelling are often accompanied by the claim that machine learning models need to become more “physics-informed”. Again, this is something that sounds eminently sensible but is really just sloganeering, the origins of which (I think) can be traced back to the unfortunately-named [“Physics Informed Neural Network”](https://arxiv.org/abs/1711.10561). -->
 
 [^2]: It fairness this conclusion is not entirely obvious based on recent press. For example, machine learning-based weather forecasts are [currently performing on-par with or better](https://sites.research.google/gr/weatherbench/) than traditional numerical ensembles for medium-range predictions. However, this is probably a reflection of how poorly traditional models are able to take advantage of observations (data assimilation), rather than because physics priors are not useful. 
 
@@ -67,22 +67,26 @@ flowchart TD
     A["Building hybrid ML/numerical models"]
 
     B["Implement forward pass in pure Fortran"]
-    C["Use Ftorch (Fortran + PyTorch)"]
+    C["Couple ML model to Fortran model"]
     D["Rewrite model in ML-friendly language"]
-    E["Jax"]
-    F["Julia"]
+    E["FTorch"]
+    F["Jax"]
+    G["Julia"]
 
     A --> B
     A --> C
     A --> D
 
-    D --> E
+    C --> E
     D --> F
+    D --> G
 ```
 
 There was a brief mention of a Fortran-native automatic differentiation (AD) library, but it sounded like a case of “there’s this one guy trying to do it.”
 
 Up to now I haven't even mentioned CPU--GPU data transfer. This can be a significant bottleneck, frequently mitigating any performance gains from executing the neural network on the GPU. Projects like [Oceananigans](https://clima.github.io/OceananigansDocumentation/stable/) [@Silvestri2023] --- the "spiritual successor" to MITgcm --- go much further than translating the code from Fortran to Julia; they completely overhaul the design so that the _entire model_, not just the ML components, run efficiently on GPUs.
+
+![The Mathematical Bridge over the river Cam.](bridge.jpg){fig-alt="Photo of the Mathematical Bridge." width=70%}
 
 ## Highlights
 
@@ -147,3 +151,6 @@ From my (relatively uninformed) perspective, the biggest challenge is to figure 
 I’ve never been to Cambridge before and it was really quite lovely — especially the old town and the college who put us up — although to me the whole city gave off distinctly ‘school’ vibes. Walking through well-kept grounds to an ancient dining hall,[^7] I kept expecting to be called to attention by a gowned professor chastising me for not wearing my clothes properly or sufficiently embodying the spirit of Selwyn College.
 
 [^7]: Walls lined with portraits of old white dudes staring down at you while you eat - check.
+
+![Selwyn College, where workshop attendees stayed.](selwyn.jpg){fig-alt="A photo of a Selwyn College building."}
+
