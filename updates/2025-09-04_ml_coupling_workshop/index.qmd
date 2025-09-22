@@ -136,7 +136,9 @@ Well… GPUs are not a good solution to every computational problem. Porting mos
 
 [^6]: Generally speaking, small problems (including small ML problems) are faster on CPU unless you can move the entire problem to the GPU (like Oceananigans).
 
-We probably need to be much more thoughtful and intentional about which problems demand acceleration that is best served by GPUs (as opposed to other optimisations) *and* can be reformulated (parallelised), implemented, and scaled so as to effectively saturate the GPU, and minimise waste / interleaves operations efficiently.
+We probably need to be much more thoughtful and intentional about which problems demand acceleration that is best served by high-performance GPUs (as opposed to consumer-grade GPUs or other optimisations) *and* can be reformulated (parallelised), implemented, and scaled[^7] so as to effectively utilise the hardware.
+
+[^7]: The types of problems that can continue to benefit from increasing GPU parallelism and on-device memory are those problems with good [_weak_ scaling](https://en.wikipedia.org/wiki/Scalability#Weak_versus_strong_scaling). That is, problems where it makes sense to scale the number of independent computations with the hardware (e.g. increasing the batch size in ML). Not all scientific modelling problems tick this box!
 
 ## Summary & Reflections
 
