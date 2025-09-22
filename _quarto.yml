@@ -34,8 +34,8 @@ website:
   page-footer: 
     center: "This website was created using the [UKCEH brand](https://github.com/ukceh-rse/brand-yml) for [Quarto](https://quarto.org/) and is hosted by [Github pages](https://pages.github.com/)."
 
-  site-url: https://ukceh-rse.github.io/quarto-site
-  repo-url: https://github.com/ukceh-rse/quarto-site
+  site-url: https://ukceh-rse.github.io
+  repo-url: https://github.com/ukceh-rse.github.io
   repo-actions: [source, issue]
   repo-link-target: _blank
 
