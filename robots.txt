@@ -1,1 +1,1 @@
-Sitemap: https://ukceh-rse.github.io/quarto-site/sitemap.xml
+Sitemap: https://ukceh-rse.github.io/sitemap.xml
