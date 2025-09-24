@@ -1,0 +1,22 @@
+---
+title: BatSync 
+subtitle: BatSync - syndicating archives of bat call data 
+date: 2025-08
+author: "[Jo Walsh](/people/jo.html)"
+
+abstract: |
+BatSync is an application funded as part of Natural England's "data mobilisation" efforts to make opportunistic data, collected by enthusiasts, available to the global biodiversity monitoring record. 
+
+RSE contributions include developing a research prototype into a robust and scalable cloud-based service, facilitating workshops with a Steering Group of stakeholders, and working with Digital Research semantics specialists to support and develop well-known community standards for bat call metadata
+
+categories:
+  - Active
+  - NCDR
+
+draft: true
+---
+
+:::{.callout-note}
+This is an **active** project.
+:::
+

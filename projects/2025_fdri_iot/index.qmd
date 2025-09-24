@@ -1,0 +1,22 @@
+---
+title: FDRI - IoT 
+subtitle: Floods and Droughts Research Infrastructure - IoT
+date: 2025-08
+author: "[Jo Walsh](/people/jo.html)"
+
+abstract: |
+The Floods and Droughts Research Infrastructure (FDRI) is a multi-million, multi-year project to improve the UK’s resilience to extreme weather events and reduce their devastating impacts on residents, businesses, services and transport.	
+
+The RSE team was called in to take over Internet of Things / Amazon Web Services integration needed for environmental monitoring project, when a key contributor changed roles. Developing open source libraries to manage both [proprietary](https://github.com/NERC-CEH/campbell-mqtt-control/) and [open source](https://github.com/NERC-CEH/fdri_raspberrypicamera/) sensor hardware, working closely with field engineers to develop their programming skills and leave them with ownership of the deployments.
+
+categories:
+  - Active
+  - NCDR
+
+draft: true
+---
+
+:::{.callout-note}
+This is an **active** project.
+:::
+
