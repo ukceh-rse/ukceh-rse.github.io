@@ -54,3 +54,6 @@ I also learnt a lot about dependency management in projects, something that is o
 - The [talk author's website](https://jatonline.github.io/managing-dependencies-using-uv-and-pixi/) on these tools is useful for a commands cheat sheet/getting started and demos. 
 
 
+### NOC Data Science Platform
+At UKCEH we have the [DataLabs platform](https://datalabs.datalabs.ceh.ac.uk) for interactive and collaborative research. However because of funding difficulties this has not been developed much for a while. Whilst it was pioneering at the time, I discovered other similar platforms that now seem to be overtaking. Key examples are the Data Science Platform at the National Oceanography Centre, and the King's Digital Lab. The NOC Data Science Platform in particular has the additional features to DataLabs of an integrated Remote Desktop feature (which is very popular amongst users, who no longer have to deal with NoMachine), mounted internal directories for easy access to files, and access to GPUs. A [cut-down demo version of the Data Science Platform is available on Binder](https://github.com/NOC-OI/dsp-binder-demo).
+
