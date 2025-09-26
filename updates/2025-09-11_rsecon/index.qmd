@@ -57,3 +57,23 @@ I also learnt a lot about dependency management in projects, something that is o
 ### NOC Data Science Platform
 At UKCEH we have the [DataLabs platform](https://datalabs.datalabs.ceh.ac.uk) for interactive and collaborative research. However because of funding difficulties this has not been developed much for a while. Whilst it was pioneering at the time, I discovered other similar platforms that now seem to be overtaking. Key examples are the Data Science Platform at the National Oceanography Centre, and the King's Digital Lab. The NOC Data Science Platform in particular has the additional features to DataLabs of an integrated Remote Desktop feature (which is very popular amongst users, who no longer have to deal with NoMachine), mounted internal directories for easy access to files, and access to GPUs. A [cut-down demo version of the Data Science Platform is available on Binder](https://github.com/NOC-OI/dsp-binder-demo).
 
+### Let's stop pretending to be Unicorns
+This was an excellent talk on the problems faced by RSEs, scientists working with RSEs, and managers of RSEs. The title of the talk refers to the RSE Unicorn, a(n unofficial?) logo adopted by some members of the RSE community. A lot of the issues raised are to be expected for such a new role, but it was nonetheless very reassuring to have these issues explicitly recognised and know that we are not alone in them - something I actually felt throughout much of the conference. I thought the points raised were so good I'm just going to leave the three key slides here verbatim rather than trying to summarise! 
+![Slide 1](PXL_20250912_152439296.jpg)
+![Slide 2](PXL_20250912_152734903.jpg)
+![Slide 3](PXL_20250912_152845604.jpg)
+Other takeaways from this talk:
+- A big problem is mismatched expectations, so setting these expectations as early as possible is key
+- Saying "No" is better than saying "Yes" but not being able to deliver well - I should remember this!!
+- A lot of us may have come from and be feeling antagonistic to academia, and feeling a bit 'us vs them'. It's understandable but doesn't help the communication problem.
+- Research is teamwork, so RSEs should be a team too!
+
+### Some other interesting stuff
+- [CATS](https://github.com/GreenScheduler/cats) A wrapper for SLURM HPC job schedulers that schedules your job for running when the UK Natl. Grid. is using less carbon intensive/more renewable energy. Love it! Related: Interactive map app showing carbon intensity of countries' electricity grids: https://app.electricitymaps.com/map/72h/hourly 
+- [A Carpentries training course](https://carpentries-incubator.github.io/python-intermediate-development/) worth checking out? 
+- The Reasonable Performance Computing Special Interest Group have a good[ tips-and-tricks page for efficient code](https://sig-rpc.github.io/). Also was a good reminder to profile my code more! 
+- [Fluid library](https://github.com/explorable-viz/fluid) for some cool interactive data visualisations. Would love to spend some time playing around with this if I ever get the time...
+
+## Final reflections
+- Refreshing to hear so many talks not about AI!!
+
