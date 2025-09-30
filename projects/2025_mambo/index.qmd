@@ -5,9 +5,9 @@ date: 2025-08
 author: "[Jo Walsh](/people/jo.html)"
 
 abstract: |
-MAMBO is an EU-wide collaboration supported by the European Commission's Horizon funding scheme. UKCEH are leading its Work Package 4, on innovative methods for working with drone data to monitor habitats.
-
-RSE contributions included turning research prototypes into reproducible packages and documented notebooks for public workshops, supporting infrastructure for drone data processing with web-based tools, and presenting at project meetings and outreach webinars on developing deep learning models to analyse drone data.
+  MAMBO is an EU-wide collaboration supported by the European Commission's Horizon funding scheme. UKCEH are leading its Work Package 4, on innovative methods for working with drone data to monitor habitats.
+  
+  RSE contributions included turning research prototypes into reproducible packages and documented notebooks for public workshops, supporting infrastructure for drone data processing with web-based tools, and presenting at project meetings and outreach webinars on developing deep learning models to analyse drone data.
 
 categories:
   - Active
