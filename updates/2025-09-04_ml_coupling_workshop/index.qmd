@@ -5,6 +5,7 @@ author:
   - name: Joe Marsh Rossney
     url: "https://ukceh-rse/github.io/people/joe.html"
 date: 2025-09-04
+last-modified: 2025-09-22
 abstract: |
   Joe attended a two-day workshop on hybrid Machine Learning x numerical models, run by the Institute of Computing for Climate Science at the University of Cambridge.
 
