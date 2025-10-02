@@ -9,23 +9,155 @@ abstract: |
 
 categories: [software, community]
 
+bibliography: references.bib
+
 toc: true
 ---
 
 ## Introduction
 
 
-The Network for sustainable Digital Research Infrastructure Vision and Expertise (NetDRIVE) is a UKRI project set up to connect various players in the DRI space (academics, software engineers, HPC managers, procurement specialists, ...) with the shared ambition to make DRI more environmentally sustainable.
+The [Network for sustainable Digital Research Infrastructure Vision and Expertise (NetDRIVE)](https://uknetdrive.org/) is a UKRI project set up to connect various players in the DRI space (academics, software engineers, HPC managers, procurement specialists, ...) with the shared ambition to make DRI more environmentally sustainable.
 
 I was fortunate enough to attend NetDRIVE's annual gathering in Durham, as a representative for the ongoing [Sustainable Digital Research Infrastructure project](/projects/2025_sdri.qmd), led by Kelly Widdicks at UKCEH.
 
-Although I'm a newcomer to this area I found it thoroughly enjoyable.
-It was a relatively small group and quite a packed schedule, so we got to know each other pretty well (by conference standards at least) --- usually with conferences I find that I have lots of one-off conversations and never get a chance to follow up.
+Although it is the spiritual successor to the [UKRI Net Zero Digital Research Infrastructure Scoping Project](https://net-zero-dri.ceda.ac.uk/) [@Juckes2023], NetDRIVE is still a young project whose scope and aims are still being refined.
+One of the main tasks for this annual gathering was to establish working groups on the following (pre-loaded, but not without push-back) topics:
 
-Although it is the spiritual successor to the [UKRI Net Zero Digital Research Infrastructure Scoping Project](https://net-zero-dri.ceda.ac.uk/), NetDRIVE is still a young project whose scope and aims are still being refined.
-One of the main tasks for this annual gathering was to establish working groups to drive forward some of the early ...
+- Training materials
+- Ethics and sustainable progress
+- Supply chain environmental sustainability clauses
+- Metrics and Reporting
 
-These working groups will mainly be driven forward by the NetDRIVE 'champions', who have 20% FTE funding from the project to work on aligned research activities.
-**There is an open call for new NetDRIVE champions -- see here.**
+These working groups will mainly be driven forward by the [NetDRIVE Champions](https://uknetdrive.org/netdrive-people/champions-for-transformational-change/), who have 20% FTE funding from the project to work on aligned research activities.
+
+**There is an open call for new NetDRIVE champions -- see [here](https://eng.ox.ac.uk/netdrive/netdrive-calls/second-funding-call/)** (deadline October 10th).
 
 
+## UKRI's position
+
+UKRI recently signed the [Concordat for the Environmental Sustainability of Research and Innovation Practice](https://wellcome.org/about-us/positions-and-statements/environmental-sustainability-concordat) (as did UKCEH!).
+
+Signatories of the concordat
+
+> agree to take shared action now and in the future to reduce and eliminate our own negative environmental impacts and emissions and achieve the transition to sustainable practices.
+
+So what does "shared action now and in the future" mean?
+
+We get more a clue from the Heidelberg Agreement on Environmental Sustainability in Research Funding [@Weber2024], which UKRI participated in the development of.
+Among other things, this states
+
+> Funders should include sustainability aspects in their funding schemes as an important consideration for decision-making processes on both the direction of research and how it is conducted.
+
+In simple terms, **UKRI are planning to include environmental sustainability as a consideration for future funding applications**, and the expected timeline is 1-2 years.
+
+
+## Training materials
+
+I joined the training materials working group.
+This is a brief overview of some of the work going on in this area.
+
+### UKRI training
+
+UKRI's Associate Director of Environmental Sustainability, Martin Farley, gave a talk about plans for a UKRI training hub.
+The website for this project is not yet live, but I'm told it will be called SPARKHub: Sustainable Practice and Research Knowledge Hub, and is expected to include
+
+- Mechanisms to facilitate sustainable research
+- Training resources (or signposting to external resources)
+- A certification scheme, most likely based on [Green DiSC](https://www.software.ac.uk/GreenDiSC)
+- Tools for assessment of experiment design
+- Emission calculators (or signposting to external calculators)
+
+NetDRIVE are expected to contribute to the training materials, but **they are looking for contributions from across the research community.**
+
+In particular, Martin has funding set aside for a short-form video about sustainable research computing; the most urgent task for the 'training materials' working group is to produce a storyboard of content.
+
+If you are interested in being involved, get in touch with NetDRIVE (netdriveoxford@gmail.com).
+
+### NetDRIVE summer schools
+
+NetDRIVE are running two 'summer' schools for PhD students, in Durham (2026) and Edinburgh (2027), and they are looking for input with the curriculum.
+
+The content is currently hosted [here](https://durham.readthedocs.io/en/latest/netdrive/index.html).
+
+I feel like there is an opportunity to integrate these outputs into the training programme for the [ExaGeo DLA](https://www.exageo.org/) -- action Joe.
+
+### EPCC best practice 'living document'
+
+Lorna Smith (EPCC, Edinburgh) is involved with the development of a living document containing best-practice guides for sustainable research computing.
+
+They have identified three topics to start with:
+
+1. Efficiency and sustainable use of DRI for simulation
+2. Balancing research innovation and environmental sustainability
+3. Sustainable operation of DRI hardware
+
+The first guide is of particular interest to the UKCEH/LU Sustainable DRI project, where we are looking at potential environmental sustainability trade-offs involving machine learning techniques applied to numerical modelling.
+Lorna also outlined some sub-topics of interest, which included: data management; reusability; failure reduction; use of AI.
+
+### 'Bite-sized' training
+
+Kirsty Pringle (SSI, Edinburgh) is working on 'bite-sized' training materials that are designed to fit into one-hour long sessions, and include a practical element.
+I think this is a great idea; it's clearly targetted at working people who sometimes find themselves with an hour to spare, and the format lends itself to learning as a group (see e.g. [CodeRefinery](https://coderefinery.org/)).
+
+### Relatable case studies
+
+Another nice idea is to weave in real, _relatable_ case studies drawn from the researcher community.
+This is part of what Andy Turner (EPCC, Edinburgh) is working on.
+
+### Reflections on training
+
+If there is one thing to criticise about the state of the field right now --- and something on show at this workshop --- it is the relative scarcity of concrete actions and outputs.
+
+It feels like we recognise this, and almost out of desperation to do *something*, to manifest our ideas *somehow*, we decide to devote our energy to running workshops or developing new training materials.
+This is pretty understandable; running workshops or producing training are discrete, completable tasks that, if push comes to shove, can be accomplished by a single individual using their own free time.
+
+I love teaching and fully believe that education can be transformative, but even I am finding this theory of change difficult to buy into.
+A proliferation of ad hoc training resources is not a bad outcome per se, but we really need a more coordinated approach that shares the burden of developing and maintaining these resources and integrates them into existing structures and processes.
+
+One of the great things about this workshop was how much enthusiasm there was for working across organisations and communities who may not have necessarily talked much in the past.
+
+## Resources and further reading
+
+### Digital arts and humanities
+
+I learned of these things from Lisa Otty's (Edinburgh) excellent talk 'Greening Digital Research in the Arts & Humanities'.
+
+- [Digital Humanities and the Climate Crisis: A Manifesto (2021)](https://dhc-barnard.github.io/envdh/)
+- [Digital Humanities Climate Coalition toolkit](https://sas-dhrh.github.io/dhcc-toolkit/)
+- A Researcher Guide to Writing a Climate Justice Oriented Data Management Plan [@DHCCInformation2022]
+- [Full Stack Feminism toolkit](https://fullstackfeminismdh.pubpub.org/full-stack-feminism-toolkit)
+- [Better Images of AI](https://betterimagesofai.org/)
+- Home page for the [Centre for Data, Culture and Society](https://www.cdcs.ed.ac.uk/) (Lisa's group)
+
+### Training
+
+- The [Carbon Literacy Project](https://carbonliteracy.com/) - apparently their training is very good, although they've somehow trademarked "Carbon Literacy" and will ask you not to use it for your own training..
+- 2023 [Report by the Skills and Net Zero Expert Advisory Group](https://www.theccc.org.uk/publication/skills-and-net-zero-expert-advisory-group/)
+- [Digital Research Competencies toolkit](https://direct-framework.github.io/digital-research-competencies-framework/) - we discussed how 'green' software principles could feed into this framework
+
+### Green software engineering
+
+- Green Algorithms [@Lannelongue2021]
+- GREENER principles for environmentally sustainable computational science [@Lannelongue2023]
+- 10 simple rules for making your computing more sustainable [@Lannelongue2021a]
+
+### Infrastructure
+
+- IRIS: eInfrastructure for Research and Innovation for STFC [@Hays2023 ; @Owen2024]. This project looked at measuring carbon costs of data centres and breaking them down into individual payloads. The next step is to look at GPU carbon costs. Alex Owen (QMUL) is the point of contact for this.
+- Recent news that [Nscale are building an big datacentre in the UK](https://www.nscale.com/press-releases/nscale-uk-ai-infrastructure-announcement) and a much bigger one in Norway where energy is far cheaper.[^1]
+
+[^1]: Access to cheap energy is a significant factor in locating HPC facilities. Michael Rudgyard explained that some older HPC clusters currently being decomissioned could be physically relocated to e.g. Iceland, and carry on delivering the same FLOPS per unit of energy as a brand new system in the same location in the UK.
+
+### Assorted
+
+- [Data Ethics book club](https://dataethicsclub.com/index.html), complete with fantastic write-ups of discussion sessions
+
+## A final note
+
+I think its fair to say that environmental movements tend to suffer from periodic crises of self-confidence, and the green computing community are not immune from this.
+Projects like NetDRIVE tend to not want to limit themselves to small, incremental contributions, but can struggle to chart a tangible and pragmatic course to acheiving their grand ambitions.
+
+In one moment of self-questioning, Loic Lannelongue from Cambridge managed to articulate a rationale that made a lot of sense to me.
+Paraphrasing: Our current role is to create useful and accessible tools --- training resources, metrics, calculators, certifications etc. --- in order to chip away at the excuses for not doing green computing on practical grounds.
+This creates the conditions where funders like UKRI can start including conditions on funding, which in turn leads to monitoring at the national scale.
