@@ -1,11 +1,12 @@
 ---
 title: NetDRIVE Annual Gathering
+image: bridge.jpg
 author:
   - name: Joe Marsh Rossney
     url: "https://ukceh-rse/github.io/people/joe.html"
 date: 2025-09-26
 abstract: |
-  Joe attended the annual gathering for the NetDRIVE project, which is focused on the long-term sustainability of digital research infrastructure.
+  Joe attended the annual gathering for the NetDRIVE project, which focses on the long-term sustainability of digital research infrastructure.
 
 categories: [software, community]
 
@@ -16,13 +17,15 @@ toc: true
 
 ## Introduction
 
-
 The [Network for sustainable Digital Research Infrastructure Vision and Expertise (NetDRIVE)](https://uknetdrive.org/) is a UKRI project set up to connect various players in the DRI space (academics, software engineers, HPC managers, procurement specialists, ...) with the shared ambition to make DRI more environmentally sustainable.
 
-I was fortunate enough to attend NetDRIVE's annual gathering in Durham, as a representative for the ongoing [Sustainable Digital Research Infrastructure project](/projects/2025_sdri.qmd), led by Kelly Widdicks at UKCEH.
+I was fortunate enough to attend NetDRIVE's annual gathering in Durham, as a representative for the ongoing [Sustainable Digital Research Infrastructure project](/projects/2025_sdri/index.qmd), led by Kelly Widdicks at UKCEH.
 
 Although it is the spiritual successor to the [UKRI Net Zero Digital Research Infrastructure Scoping Project](https://net-zero-dri.ceda.ac.uk/) [@Juckes2023], NetDRIVE is still a young project whose scope and aims are still being refined.
 One of the main tasks for this annual gathering was to establish working groups on the following (pre-loaded, but not without push-back) topics:
+
+:::: {.columns}
+::: {.column width="60%"}
 
 - Training materials
 - Ethics and sustainable progress
@@ -33,6 +36,13 @@ These working groups will mainly be driven forward by the [NetDRIVE Champions](h
 
 **There is an open call for new NetDRIVE champions -- see [here](https://eng.ox.ac.uk/netdrive/netdrive-calls/second-funding-call/)** (deadline October 10th).
 
+:::
+::: {.column width="40%"}
+
+![View of Durham cathedral from the cloisters.](cathedral.jpg){width=70%}
+
+:::
+::::
 
 ## UKRI's position
 
@@ -50,7 +60,6 @@ Among other things, this states
 > Funders should include sustainability aspects in their funding schemes as an important consideration for decision-making processes on both the direction of research and how it is conducted.
 
 In simple terms, **UKRI are planning to include environmental sustainability as a consideration for future funding applications**, and the expected timeline is 1-2 years.
-
 
 ## Training materials
 
@@ -161,3 +170,5 @@ Projects like NetDRIVE tend to not want to limit themselves to small, incrementa
 In one moment of self-questioning, Loic Lannelongue from Cambridge managed to articulate a rationale that made a lot of sense to me.
 Paraphrasing: Our current role is to create useful and accessible tools --- training resources, metrics, calculators, certifications etc. --- in order to chip away at the excuses for not doing green computing on practical grounds.
 This creates the conditions where funders like UKRI can start including conditions on funding, which in turn leads to monitoring at the national scale.
+
+![The river Wear, which runs through Durham.](river.jpg)
