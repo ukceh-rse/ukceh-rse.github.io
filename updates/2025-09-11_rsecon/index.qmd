@@ -15,6 +15,10 @@ categories: [software, community]
 draft: true
 ---
 
+:::{.note}
+Many of the presentations were recorded and will become available on YouTube in due course. We will update this post with links to these recordings when they are released.
+:::
+
 ## What is it? 
 
 The Research Software Engineering conference, is an annual gathering of Research Software Engineers (or RSEs), largely from the UK but also plenty from further afield, from a variety of backgrounds, institutions, universities and companies. It's a broad church! The annual conference was started several years ago by what is now the [Society of Research Software Engineering](https://society-rse.org/) in response to the growing need for the recognition of the distinct role of RSEs, which at the time did not exist as a job title. Now, with the growing recognition of the role of RSE within Research, and elsewhere, the annual conference plays host to several hundred RSEs, providing an opportunity to share experiences & knowledge, find commonalities in our broad remits, and generally nerd out.
@@ -24,6 +28,47 @@ The Research Software Engineering conference, is an annual gathering of Research
 After attending last year whilst we were still finding our feet as a newly established RSE team at UKCEH, this year we felt able to contribute more to the programme of talks, workshops and events. Joe hosted a workshop on AI, where attendees attempted to work out what it meant to our profession and how we should approach it, Robin and Matt presented on how UKCEH builds and delivers Digital Research Infrastructure, and Matt [presented](https://github.com/user-attachments/files/22431521/RSECon.NOC.UKCEH.pptx) jointly with [Tobias](https://noc.ac.uk/n/Tobias+Ramalho+Dos+Santos+Ferreira) from the National Oceanography Centre on their work making large gridded datasets hosted in the cloud easier to use, [and also briefly](https://github.com/user-attachments/files/22431568/GeoSci_SIG_RSECon25_UniFHy.pptx) at the Geosciences "Birds of a Feather" session on the [Unified Modelling Framework for Hydrology](https://unifhy-org.github.io/unifhy/) developed at UKCEH. 
 
 ## Joe's reflections
+
+### Open source software and culture
+
+I spent almost all of the first day in sessions on open source, having been inspired by the very first plenary session by [Amanda Brock](https://openuk.uk/profiles/amanda-brock/) from the non-profit [OpenUK](https://openuk.uk/), titled "the rise of open source in research".
+
+Brock is a lawyer by training and open source expert, having spent 6 years working at Canonical (who make Ubuntu), and authored/edited a textbook on open source law, policy and practice [@Brock2022], which is available online for free at [amandabrock.com/books/](https://amandabrock.com/books/).
+
+OpenUK are a really interesting looking organisation worth following and engaging with.
+They publish an annual report on the ['state of open source' in the UK](https://openuk.uk/stateofopen/) (increasingly focused on AI), and organise [meet-ups across the UK](https://openuk.uk/community/meetup/).
+
+The main take-home message was that the definition of open source is critical, and not every license on GitHub meets the [Open Source Definition](https://opensource.org/osd).
+Amanda drew exra attention to criteria 5 & 6:
+
+5. No discrimination against persons or groups
+6. No discrimination against fields of endeavor
+
+This means _no commercial restrictions_; any project that has an 'academic-only' clause is not open source in this technical sense, even if the source code is viewable.
+The reason this is important is to produce a 'free flow' of ideas --- developers do not need to keep coming back to ask for permission --- and this is key to the success of open source in the real world.
+
+I was reminded of the [ongoing confusion surrounding Eddypro](https://github.com/LI-COR-Environmental/eddypro-engine/issues/10) after an academic-only clause was 'merged' into a GPLv3-licensed codebase, and of the difficulties faced by a certain restrictively-licensed model in maintaining a user base.
+There is so much high quality open source code out there, that many people have come to the conclusion that non-open source code is simply too much hassle to be worth dealing with.
+I am absolutely one of those people.
+
+Talking about her experience in trying to get Ubuntu adopted by organisations, Brock said:
+
+> These people \[lawyers, procurement professionals, finance people\] are super risk-averse. It's easier to say no than yes, and you don't get sacked for saying no ... What we've seen is the rise of the developer over the last 10 years shifting things ... and the ability to just take code and bring it into your organisation ... means that you don't have to go through those gatekeepers.
+
+
+I spent much of the rest of the day in a triple-part discussion session on open source in academia, led by individuals from various universities, the Alan Turing Institute, and a curious US-based organisation called [CURIOSS](https://curioss.org/).
+
+CURIOSS is a **C**ommunity for **U**niversity and **R**esearch **I**nstitution **OS**PO**s** (Open Source Program Offices), whose stated aim is to provide support to members creating, managing and sustaining OSPOs [@Young.Barba.ea2024].
+CURIOSS curate a [collection of "patterns"](https://github.com/CURIOSSorg/curioss-patterns) which are "reusable solutions to common problems within a specific context."
+These cover all kinds of topics ranging from community building to advocacy, governance and policy, and they are open to contributions.
+
+One pattern I really like the sound of is the "documentation sprint" described by Arielle Bennet (ATI) [@Bennet2024], where a team of people get together for a period of intense focus on improving code documentation.
+I would like to adopt this pattern in the RSE group, perhaps interleaved with sprints for producing training materials.
+
+
+### AI tools in the RSE workplace
+
+To do.
 
 ## Robin's reflections
 
