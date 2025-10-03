@@ -4,12 +4,121 @@ author:
   - name: Joe Marsh Rossney
     url: "https://ukceh-rse/github.io/people/joe.html"
   - name: Matt Dalle Piagge
+    url: "https://ukceh-rse/github.io/people/matt_dp.html"
   - name: Robin Long
+    url: "https://ukceh-rse/github.io/people/robin.html"
 date: 2025-09-11
 abstract: |
-  Three of us attended the annual Research Software Engineering conference.
+  Three of us attended the annual Research Software Engineering conference, this year held at the University of Warwick, which is not actually in Warwick, but on the outskirts of Coventry. Here are some reflections on the time.
 
 categories: [software, community]
 draft: true
 ---
 
+:::{.note}
+Many of the presentations were recorded and will become available on YouTube in due course. We will update this post with links to these recordings when they are released.
+:::
+
+## What is it? 
+
+The Research Software Engineering conference, is an annual gathering of Research Software Engineers (or RSEs), largely from the UK but also plenty from further afield, from a variety of backgrounds, institutions, universities and companies. It's a broad church! The annual conference was started several years ago by what is now the [Society of Research Software Engineering](https://society-rse.org/) in response to the growing need for the recognition of the distinct role of RSEs, which at the time did not exist as a job title. Now, with the growing recognition of the role of RSE within Research, and elsewhere, the annual conference plays host to several hundred RSEs, providing an opportunity to share experiences & knowledge, find commonalities in our broad remits, and generally nerd out.
+
+## What did we do there?
+
+After attending last year whilst we were still finding our feet as a newly established RSE team at UKCEH, this year we felt able to contribute more to the programme of talks, workshops and events. Joe hosted a workshop on AI, where attendees attempted to work out what it meant to our profession and how we should approach it, Robin and Matt presented on how UKCEH builds and delivers Digital Research Infrastructure, and Matt [presented](https://github.com/user-attachments/files/22431521/RSECon.NOC.UKCEH.pptx) jointly with [Tobias](https://noc.ac.uk/n/Tobias+Ramalho+Dos+Santos+Ferreira) from the National Oceanography Centre on their work making large gridded datasets hosted in the cloud easier to use, [and also briefly](https://github.com/user-attachments/files/22431568/GeoSci_SIG_RSECon25_UniFHy.pptx) at the Geosciences "Birds of a Feather" session on the [Unified Modelling Framework for Hydrology](https://unifhy-org.github.io/unifhy/) developed at UKCEH. 
+
+## Joe's reflections
+
+### Open source software and culture
+
+I spent almost all of the first day in sessions on open source, having been inspired by the very first plenary session by [Amanda Brock](https://openuk.uk/profiles/amanda-brock/) from the non-profit [OpenUK](https://openuk.uk/), titled "the rise of open source in research".
+
+Brock is a lawyer by training and open source expert, having spent 6 years working at Canonical (who make Ubuntu), and authored/edited a textbook on open source law, policy and practice [@Brock2022], which is available online for free at [amandabrock.com/books/](https://amandabrock.com/books/).
+
+OpenUK are a really interesting looking organisation worth following and engaging with.
+They publish an annual report on the ['state of open source' in the UK](https://openuk.uk/stateofopen/) (increasingly focused on AI), and organise [meet-ups across the UK](https://openuk.uk/community/meetup/).
+
+The main take-home message was that the definition of open source is critical, and not every license on GitHub meets the [Open Source Definition](https://opensource.org/osd).
+Amanda drew exra attention to criteria 5 & 6:
+
+5. No discrimination against persons or groups
+6. No discrimination against fields of endeavor
+
+This means _no commercial restrictions_; any project that has an 'academic-only' clause is not open source in this technical sense, even if the source code is viewable.
+The reason this is important is to produce a 'free flow' of ideas --- developers do not need to keep coming back to ask for permission --- and this is key to the success of open source in the real world.
+
+I was reminded of the [ongoing confusion surrounding Eddypro](https://github.com/LI-COR-Environmental/eddypro-engine/issues/10) after an academic-only clause was 'merged' into a GPLv3-licensed codebase, and of the difficulties faced by a certain restrictively-licensed model in maintaining a user base.
+There is so much high quality open source code out there, that many people have come to the conclusion that non-open source code is simply too much hassle to be worth dealing with.
+I am absolutely one of those people.
+
+Talking about her experience in trying to get Ubuntu adopted by organisations, Brock said:
+
+> These people \[lawyers, procurement professionals, finance people\] are super risk-averse. It's easier to say no than yes, and you don't get sacked for saying no ... What we've seen is the rise of the developer over the last 10 years shifting things ... and the ability to just take code and bring it into your organisation ... means that you don't have to go through those gatekeepers.
+
+
+I spent much of the rest of the day in a triple-part discussion session on open source in academia, led by individuals from various universities, the Alan Turing Institute, and a curious US-based organisation called [CURIOSS](https://curioss.org/).
+
+CURIOSS is a **C**ommunity for **U**niversity and **R**esearch **I**nstitution **OS**PO**s** (Open Source Program Offices), whose stated aim is to provide support to members creating, managing and sustaining OSPOs [@Young.Barba.ea2024].
+CURIOSS curate a [collection of "patterns"](https://github.com/CURIOSSorg/curioss-patterns) which are "reusable solutions to common problems within a specific context."
+These cover all kinds of topics ranging from community building to advocacy, governance and policy, and they are open to contributions.
+
+One pattern I really like the sound of is the "documentation sprint" described by Arielle Bennet (ATI) [@Bennet2024], where a team of people get together for a period of intense focus on improving code documentation.
+I would like to adopt this pattern in the RSE group, perhaps interleaved with sprints for producing training materials.
+
+
+### AI tools in the RSE workplace
+
+To do.
+
+## Robin's reflections
+
+## Matt's reflections/highlights
+
+### [Large gridded data in the cloud](https://github.com/user-attachments/files/22431521/RSECon.NOC.UKCEH.pptx)
+
+- Our talk on making large cloud-hosted gridded datasets easier to use garnered a lot of interest from a variety of organisations who were encountering similar problems and trying to solve them. This seems to be a common problem with a clear need for the work we're doing, trying to make this easier. It'd be great to get together again with everyone who has been working in this area, to share what we've learnt and how we're doing things, perhaps with a view to developing guidance and best practices. 
+- It's also a fast moving area, as I was introduced to [PyFive](https://pyfive.readthedocs.io/en/latest/optimising.html), which is a new library that might radically simply the data access and conversion, by avoiding the need to convert files to other formats (namely [Zarr](https://zarr.dev/) and/or [Kerchunk](https://fsspec.github.io/kerchunk/)), but nonetheless maintaining/recreating a lot of the functionality of these. 
+- Once [PyFive](https://pyfive.readthedocs.io/en/latest/optimising.html) is updated to integrate with Xarray/be a new Xarray backend, we should conduct performance tests vs the existing approach, to establish the veracity of the claims! A repeat of our [original chunking tests](https://github.com/NERC-CEH/object_store_tutorial/blob/main/img/objstore_rm4.png) perhaps. 
+
+### [Mike Simpson's wonderful initiative around RSE mental health](https://www.software.ac.uk/blog/converse-lets-talk-about-mental-health)
+- Mike gave a very brave talk about his own experience with bad mental health and has chosen to make sure less people end up this way. This seems like a great initiative to contribute to. 
+- His talk introduced me to the concept of Mental Health First Aid as a thing, and that there are courses for this, something I would be interested in doing. 
+- His main argument for investment in this area, both from institutions and from us for ourselves was very compelling: it is always cheaper to proactively look after mental health before it gets to the point where you breakdown, often staggeringly so. 
+- The statistics around mental health never cease to be shocking. 
+- ["Task Management for Humans as Self-Care"](https://carpentries-incubator.github.io/task-management/aio.html?source=post_page-----cf4c99c0e25d--------------------------------) is a good carpentries training course that was highlighted, emphasising that we can use Task Management techniques to better manage our mental health instead of to purely increase productivity. 
+
+### Dependency Management
+I also learnt a lot about dependency management in projects, something that is often the bane of our lives as RSEs! Up to now I have largely been using Anaconda, which works most of the time now that I am used to it, but still often runs into problems that can be very complicated and time-consuming to solve. Turns out the RSE community has produced an alternative, one that I am very interested in using going forward...
+- There's two main contenders: [uv](https://docs.astral.sh/uv/) and/or [pixi](https://pixi.sh/latest/)
+- Pixi is recommend for those used to using conda, but ultimately they're both quite similar
+- It avoids common dependency clash problems which is the main source of headaches with conda
+- They both make it clearer what the actual direct dependencies of your project are, vs. all the sub-dependencies you get when creating a conda dependencies list
+- They allow easy environment porting to other systems - conda's env file doesn't do this
+- They both work through a config.toml and a lock file
+- They both use an "init, add, run" flow
+- And crucially, the usage is simple: no need to manually activate environments. Instead the environment needed is taken from the config file in the folder you're in and automatically loaded when running the script.
+- The [talk author's website](https://jatonline.github.io/managing-dependencies-using-uv-and-pixi/) on these tools is useful for a commands cheat sheet/getting started and demos. 
+
+
+### NOC Data Science Platform
+At UKCEH we have the [DataLabs platform](https://datalabs.datalabs.ceh.ac.uk) for interactive and collaborative research. However because of funding difficulties this has not been developed much for a while. Whilst it was pioneering at the time, I discovered other similar platforms that now seem to be overtaking. Key examples are the Data Science Platform at the National Oceanography Centre, and the King's Digital Lab. The NOC Data Science Platform in particular has the additional features to DataLabs of an integrated Remote Desktop feature (which is very popular amongst users, who no longer have to deal with NoMachine), mounted internal directories for easy access to files, and access to GPUs. A [cut-down demo version of the Data Science Platform is available on Binder](https://github.com/NOC-OI/dsp-binder-demo).
+
+### Let's stop pretending to be Unicorns
+This was an excellent talk on the problems faced by RSEs, scientists working with RSEs, and managers of RSEs. The title of the talk refers to the [RSE Unicorn](https://socrse.myspreadshop.co.uk/rse+unicorn+magic-A6318627501e05c116a01f2a6?productType=1459&sellable=LnByYpv4vYcxd2EvJpld-1459-215&appearance=839&size=251), a(n unofficial?) logo adopted by some members of the RSE community. A lot of the issues raised are to be expected for such a new role, but it was nonetheless very reassuring to have these issues explicitly recognised and know that we are not alone in them - something I actually felt throughout much of the conference. I thought the points raised were so good I'm just going to leave the three key slides here verbatim rather than trying to summarise! 
+![Slide 1](PXL_20250912_152439296.jpg)
+![Slide 2](PXL_20250912_152734903.jpg)
+![Slide 3](PXL_20250912_152845604.jpg)
+Other takeaways from this talk:
+- A big problem is mismatched expectations, so setting these expectations as early as possible is key
+- Saying "No" is better than saying "Yes" but not being able to deliver well - I should remember this!!
+- A lot of us may have come from and be feeling antagonistic to academia, and feeling a bit 'us vs them'. It's understandable but doesn't help the communication problem.
+- Research is teamwork, so RSEs should be a team too!
+
+### Some other interesting stuff
+- [CATS](https://github.com/GreenScheduler/cats) A wrapper for SLURM HPC job schedulers that schedules your job for running when the UK Natl. Grid. is using less carbon intensive/more renewable energy. Love it! Related: Interactive map app showing carbon intensity of countries' electricity grids: https://app.electricitymaps.com/map/72h/hourly 
+- [A Carpentries training course](https://carpentries-incubator.github.io/python-intermediate-development/) worth checking out? 
+- The Reasonable Performance Computing Special Interest Group have a good [tips-and-tricks page for efficient code](https://sig-rpc.github.io/). Also was a good reminder to profile my code more! 
+- [Fluid library](https://github.com/explorable-viz/fluid) for some cool interactive data visualisations. Would love to spend some time playing around with this if I ever get the time...
+
+## Final reflections
+A worthwhile conference that we got a lot out of and contributed a lot to! I really valued the sense of community and of working together to solve the problems we face. There was very clearly a lot of effort put in to making the wide range of people attending as comfortable as possible, from dedicated quiet spaces, distributed (i.e. choose your favourite) socials and the ["pacman rule"](https://www.ericholscher.com/blog/2017/aug/2/pacman-rule-conferences/), all of which I very much appreciated. All of this contributed to a very friendly and welcoming conference that felt quite different to the academic conferences I'd been to in the past. Until next year! 
