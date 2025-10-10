@@ -2,90 +2,94 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ukceh-rse.github.io/people/robin.html</loc>
-    <lastmod>2025-09-30T10:28:49.793Z</lastmod>
+    <lastmod>2025-09-22T12:18:52.066Z</lastmod>
   </url>
   <url>
     <loc>https://ukceh-rse.github.io/people/matt_c.html</loc>
-    <lastmod>2025-09-30T10:28:49.793Z</lastmod>
+    <lastmod>2025-09-22T12:18:52.065Z</lastmod>
   </url>
   <url>
     <loc>https://ukceh-rse.github.io/people/jo.html</loc>
-    <lastmod>2025-09-30T10:28:49.793Z</lastmod>
+    <lastmod>2025-09-22T12:18:52.065Z</lastmod>
   </url>
   <url>
     <loc>https://ukceh-rse.github.io/contact.html</loc>
-    <lastmod>2025-09-30T10:28:49.793Z</lastmod>
+    <lastmod>2025-09-22T13:15:59.544Z</lastmod>
   </url>
   <url>
-    <loc>https://ukceh-rse.github.io/updates/2025-09-11_rsecon/index.html</loc>
-    <lastmod>2025-09-30T10:28:49.804Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ukceh-rse.github.io/updates/2025-08-30_welcome/index.html</loc>
-    <lastmod>2025-09-30T12:52:02.642Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ukceh-rse.github.io/tutorials/index.html</loc>
-    <lastmod>2025-09-30T10:28:50.447Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ukceh-rse.github.io/projects/index.html</loc>
-    <lastmod>2025-09-30T10:28:49.799Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ukceh-rse.github.io/projects/2025_mambo/index.html</loc>
-    <lastmod>2025-09-30T10:34:23.997Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ukceh-rse.github.io/projects/2025_biodt/index.html</loc>
-    <lastmod>2025-09-30T10:28:49.799Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ukceh-rse.github.io/people/index.html</loc>
-    <lastmod>2025-09-30T10:28:49.793Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ukceh-rse.github.io/index.html</loc>
-    <lastmod>2025-09-30T10:28:49.793Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ukceh-rse.github.io/projects/2025_batsync/index.html</loc>
-    <lastmod>2025-09-30T10:34:46.861Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ukceh-rse.github.io/projects/2025_fdri_iot/index.html</loc>
-    <lastmod>2025-09-30T10:35:14.432Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ukceh-rse.github.io/projects/2025_sdri/index.html</loc>
-    <lastmod>2025-09-30T10:28:49.799Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ukceh-rse.github.io/tutorials/brand-yml/index.html</loc>
-    <lastmod>2025-09-30T10:44:00.785Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ukceh-rse.github.io/tutorials/interactive-plots/index.html</loc>
-    <lastmod>2025-09-30T10:28:50.447Z</lastmod>
+    <loc>https://ukceh-rse.github.io/updates/2025-09-26_netdrive/index.html</loc>
+    <lastmod>2025-10-10T14:29:01.213Z</lastmod>
   </url>
   <url>
     <loc>https://ukceh-rse.github.io/updates/2025-09-04_ml_coupling_workshop/index.html</loc>
-    <lastmod>2025-09-30T12:53:34.098Z</lastmod>
+    <lastmod>2025-10-03T14:02:43.193Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ukceh-rse.github.io/tutorials/interactive-plots/index.html</loc>
+    <lastmod>2025-09-01T15:56:09.975Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ukceh-rse.github.io/tutorials/brand-yml/index.html</loc>
+    <lastmod>2025-09-01T11:03:29.634Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ukceh-rse.github.io/projects/2025_sdri/index.html</loc>
+    <lastmod>2025-09-22T12:18:52.074Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ukceh-rse.github.io/projects/2025_fdri_iot/index.html</loc>
+    <lastmod>2025-10-03T14:02:43.192Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ukceh-rse.github.io/projects/2025_batsync/index.html</loc>
+    <lastmod>2025-10-03T14:02:43.192Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ukceh-rse.github.io/index.html</loc>
+    <lastmod>2025-09-22T13:15:35.153Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ukceh-rse.github.io/people/index.html</loc>
+    <lastmod>2025-09-22T12:18:52.065Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ukceh-rse.github.io/projects/2025_biodt/index.html</loc>
+    <lastmod>2025-09-22T12:18:52.074Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ukceh-rse.github.io/projects/2025_mambo/index.html</loc>
+    <lastmod>2025-10-03T14:02:43.192Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ukceh-rse.github.io/projects/index.html</loc>
+    <lastmod>2025-09-22T12:18:52.075Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ukceh-rse.github.io/tutorials/index.html</loc>
+    <lastmod>2025-09-01T11:14:33.967Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ukceh-rse.github.io/updates/2025-08-30_welcome/index.html</loc>
+    <lastmod>2025-09-22T12:18:52.075Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ukceh-rse.github.io/updates/2025-09-11_rsecon/index.html</loc>
+    <lastmod>2025-10-10T14:28:58.178Z</lastmod>
   </url>
   <url>
     <loc>https://ukceh-rse.github.io/updates/index.html</loc>
-    <lastmod>2025-09-30T10:28:49.804Z</lastmod>
+    <lastmod>2025-09-22T12:18:52.081Z</lastmod>
   </url>
   <url>
     <loc>https://ukceh-rse.github.io/workshops.html</loc>
-    <lastmod>2025-09-30T10:28:49.804Z</lastmod>
+    <lastmod>2025-09-22T12:18:52.082Z</lastmod>
   </url>
   <url>
     <loc>https://ukceh-rse.github.io/people/joe.html</loc>
-    <lastmod>2025-09-30T10:28:49.793Z</lastmod>
+    <lastmod>2025-09-22T12:18:52.065Z</lastmod>
   </url>
   <url>
     <loc>https://ukceh-rse.github.io/people/matt_dp.html</loc>
-    <lastmod>2025-09-30T10:28:49.793Z</lastmod>
+    <lastmod>2025-09-22T12:18:52.065Z</lastmod>
   </url>
 </urlset>
